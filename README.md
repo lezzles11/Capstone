@@ -1,5 +1,7 @@
 # Capstone Project: Project Management :rocket:
 
+Deadline: Jan 12, 2021
+
 ## Purpose :dark_sunglasses:
 
 The purpose of this repository is to implement a project management application that utilizes JWT, redux (with redux logger and redux thunk), react and enzyme.
@@ -17,7 +19,7 @@ The purpose of this repository is to implement a project management application 
 - [ ] Users will be able to see the about page and how to utilize the application.
 - [ ] Users will be able to add the time they have spent on developing an application.
 
-###
+### Extra User Stories
 
 - [ ] Users will be able to connect a calendar application to their email.
 - [ ] Users will be able to create voice recordings.
@@ -61,7 +63,7 @@ npm start
 |       |                         |          |                |             |
 |       |                         |          |                |             |
 
-### Daily Stand Up :hourglass:
+### Common Errors :hourglass:
 
 ## Issues and Resolutions :flashlight:
 
@@ -74,7 +76,7 @@ npm start
 
 #### What is one thing that I learned from doing this project? :books:
 
-#### Credits :recycle:
+#### Packages :recycle:
 
 [Jest](https://jestjs.io/)
 [React](https://reactjs.org/)
