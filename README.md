@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Capstone Project: Project Management :rocket:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose :dark_sunglasses:
 
-## Available Scripts
+The purpose of this repository is to implement a project management application that utilizes JWT, redux (with redux logger and redux thunk), react and enzyme.
 
-In the project directory, you can run:
+### User Stories
 
-### `yarn start`
+- [ ] Users will be able to register for an account.
+- [ ] Users will be able to login to the account.
+- [ ] Users will be able to login through facebook.
+- [ ] Users will be able to create a project.
+- [ ] Users will be able to save the data to the backend.
+- [ ] Users will be able to start, pause and restart a timer when they start the work.
+- [ ] Users will be able to visualize and track the time that they have spent on a particular project.
+- [ ] Users will be able to break things down into smaller projects.
+- [ ] Users will be able to see the about page and how to utilize the application.
+- [ ] Users will be able to add the time they have spent on developing an application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [ ] Users will be able to connect a calendar application to their email.
+- [ ] Users will be able to create voice recordings.
 
-### `yarn test`
+### How to run this package
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+```
 
-### `yarn build`
+```
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How it works :open_book:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Image](https://www.dropbox.com/s/qssnbo02fau4wwc/Screen%20Shot%202020-07-27%20at%2014.01.49.png?raw=1)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Important Vocabulary
 
-### `yarn eject`
+| Word | Where it occurs | How it works |
+| ---- | :-------------: | :----------: |
+| Word |                 |              |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Sprint :athletic_shoe:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Done? | Component               | Priority | Estimated Time | Actual Time |
+| ----- | ----------------------- | :------: | :------------: | :---------: |
+| x     | This checklist          |    H     |    30 mins     |             |
+|       | Plan out user interface |    H     |    2 hours     |             |
+|       | Create database         |    H     |   3-4 hours    |             |
+|       | Create views            |    M     |    30 mins     |     15      |
+|       | Create backend          |          |                |             |
+|       | Login functionality     |          |                |             |
+|       |                         |          |                |             |
+|       |                         |          |                |             |
+|       |                         |          |                |             |
+|       |                         |          |                |             |
+|       |                         |          |                |             |
+|       |                         |          |                |             |
+|       |                         |          |                |             |
+|       |                         |          |                |             |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Daily Stand Up :hourglass:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Issues and Resolutions :flashlight:
 
-## Learn More
+**ERROR**: :gear:
+**RESOLUTION**: :key:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Issue                | Where it occurs | Possible solution | Actual solution |
+| -------------------- | :-------------: | :---------------: | :-------------: |
+| Creating a checklist |        H        |       2hrs        |     2.5hrs      |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### What is one thing that I learned from doing this project? :books:
 
-### Code Splitting
+#### Credits :recycle:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Jest](https://jestjs.io/)
+[React](https://reactjs.org/)
+[React-Router](https://reactrouter.com/)
+[Redux](https://redux.js.org/)
+[JWT](https://jwt.io/)
+[Enzyme]()
+[]()
+[]()
 
-### Analyzing the Bundle Size
+#### Contributing :round_pushpin:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Not sure how? Learn [Github](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR)
+Please make sure to update tests as appropriate.
