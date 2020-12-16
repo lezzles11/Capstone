@@ -6,8 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App container">
-        <h1>Project Management Application</h1>
+      <div>
         <Navbar />
       </div>
     </Router>
