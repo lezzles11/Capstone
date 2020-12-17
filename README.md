@@ -12,13 +12,13 @@ Benchmark Deadline for UI: Dec 20
 - [ ] Project Description
 - [ ] Timer
 
-      Benchmark Deadline for Testing: Dec 23
-      Benchmark Deadline for Database: Dec 25
-      Benchmark Deadline for API: Dec 28
-      Benchmark Deadline for Authentication: Dec 31
-      Benchmark Deadline for Redux: Jan 5
-      Benchmark Deadline for Payment: Jan 10
-      Benchmark Deadline for Deployment: Jan 12
+Benchmark Deadline for Testing: Dec 23
+Benchmark Deadline for Database: Dec 25
+Benchmark Deadline for API: Dec 28
+Benchmark Deadline for Authentication: Dec 31
+Benchmark Deadline for Redux: Jan 5
+Benchmark Deadline for Payment: Jan 10
+Benchmark Deadline for Deployment: Jan 12
 
 ## Purpose :dark_sunglasses:
 
