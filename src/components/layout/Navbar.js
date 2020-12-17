@@ -10,6 +10,8 @@ import AboutPage from "../pages/AboutPage";
 import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
 import AddProjectPage from "../pages/AddProjectPage";
+import CalendarPage from "../pages/CalendarPage";
+import ProjectPage from "../pages/ProjectPage";
 
 function Nav() {
   return (
@@ -17,19 +19,39 @@ function Nav() {
       <nav className="navbar navbar-expand-lg navbar-light blue lighten-4">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item mx-2">
-            <Link to="/">Home</Link>
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
           </li>
           <li className="nav-item mx-2">
-            <Link to="/about">About</Link>
+            <Link className="nav-link" to="/about">
+              About
+            </Link>
           </li>
           <li className="nav-item mx-2">
-            <Link to="/login">Login</Link>
+            <Link className="nav-link" to="/login">
+              Login
+            </Link>
           </li>
           <li className="nav-item mx-2">
-            <Link to="/signup">Signup</Link>
+            <Link className="nav-link" to="/signup">
+              Signup
+            </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/addproject">Add Project</Link>
+          <li className="nav-item mx-2">
+            <Link className="nav-link" to="/addproject">
+              Add Project
+            </Link>
+          </li>
+          <li className="nav-item mx-2">
+            <Link className="nav-link" to="/calendar">
+              Calendar
+            </Link>
+          </li>
+          <li className="nav-item mx-2">
+            <Link className="nav-link" to="/projects">
+              Projects
+            </Link>
           </li>
         </ul>
       </nav>
@@ -40,6 +62,12 @@ function SwitchFunction() {
   return (
     <div className="container">
       <Switch>
+        <Route path="/projects">
+          <ProjectPage />
+        </Route>
+        <Route path="/calendar">
+          <CalendarPage />
+        </Route>
         <Route path="/addproject">
           <AddProjectPage />
         </Route>
@@ -64,6 +92,14 @@ export default function Navbar() {
   return (
     <div>
       <Nav />
+      <h5>Deadline: Jan 12, 2021</h5>
+      <ol>
+        <li>Finish functionality list</li>
+        <li>Finish wireframe</li>
+        <li>code out the UI</li>
+        <li>Create database</li>
+        <li></li>
+      </ol>
       <SwitchFunction />
     </div>
   );
