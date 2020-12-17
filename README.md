@@ -13,7 +13,19 @@ Benchmark Deadline for UI: Dec 20
 - [ ] Timer
 
 Benchmark Deadline for Testing: Dec 23
+
+- [ ] Frontend Testing Components
+- [ ] Backend Testing Database
+- [ ] Testing Routes
+- [ ] Backend Testing Authentication
+- [ ] Frontend Testing States
+
 Benchmark Deadline for Database: Dec 25
+
+- [ ] Set up database diagram
+- [ ] Write down all queries
+- [ ]
+
 Benchmark Deadline for API: Dec 28
 Benchmark Deadline for Authentication: Dec 31
 Benchmark Deadline for Redux: Jan 5
