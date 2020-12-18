@@ -54,46 +54,39 @@ function MinusSign() {
   );
 }
 
-function TimeInput() {
+function TimeInput({ placeholder }) {
   return (
-    <div className="input-group md-form form-sm form-2 pl-0">
-      <div className="input-group-append">
-        <span
-          className="form-control btn-outline-warning waves-effect"
-          id="basic-text1"
-        >
-          <MinusSign />
-        </span>
-      </div>
-      <input
-        className="form-control amber-border"
-        type="text"
-        placeholder="00"
-        aria-label="time"
-      />
-      <small
-        id="time"
-        className="form-text text-muted mb-4"
-      >
-        Hours
-      </small>
-      <div className="input-group-append">
-        <span
-          className="form-control btn-outline-warning waves-effect"
-          id="basic-text1"
-        >
-          <AddSign />
-        </span>
+    <div>
+      <div className="input-group md-form">
+        <div className="input-group-append">
+          <span
+            className="form-control btn-outline-warning waves-effect"
+            id="basic-text1"
+          >
+            <MinusSign />
+          </span>
+        </div>
+        <input
+          className="form-control amber-border"
+          type="text"
+          placeholder={placeholder}
+          aria-label="time"
+        />
+        <div className="input-group-append">
+          <span
+            className="form-control btn-outline-warning waves-effect"
+            id="basic-text1"
+          >
+            <AddSign />
+          </span>
+        </div>
       </div>
     </div>
   );
 }
-export default function AddDeliverablesPage() {
+function Deliverable() {
   return (
     <div>
-      <h4>Add Deliverables Page</h4>
-      <h3>Task Breakdown</h3>
-      <br />
       <div className="row">
         <h6>Deliverable 1</h6>
       </div>
@@ -139,15 +132,26 @@ export default function AddDeliverablesPage() {
       </div>
       <div className="row">
         <div className="col">
-          <TimeInput />
+          <TimeInput placeholder="Days" />
         </div>
         <div className="col">
-          <TimeInput />
+          <TimeInput placeholder="Hours" />
         </div>
         <div className="col">
-          <TimeInput />
+          <TimeInput placeholder="Minutes" />
         </div>
       </div>
+    </div>
+  );
+}
+export default function AddDeliverablesPage() {
+  return (
+    <div>
+      <h4>Add Deliverables Page</h4>
+      <h3>Task Breakdown</h3>
+      <br />
+      <Deliverable />
+      <Deliverable />
     </div>
   );
 }
