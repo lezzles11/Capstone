@@ -12,6 +12,7 @@ import SignupPage from "../pages/SignupPage";
 import AddProjectPage from "../pages/AddProjectPage";
 import CalendarPage from "../pages/CalendarPage";
 import ProjectPage from "../pages/ProjectPage";
+import AddDeliverablesPage from "../pages/AddDeliverablesPage";
 
 function Nav() {
   return (
@@ -53,6 +54,14 @@ function Nav() {
               Projects
             </Link>
           </li>
+          <li className="nav-item mx-2">
+            <Link
+              className="nav-link"
+              to="/adddeliverables"
+            >
+              Add Deliverables
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -79,6 +88,10 @@ function SwitchFunction() {
         </Route>
         <Route path="/about">
           <AboutPage />
+        </Route>
+
+        <Route path="/adddeliverables">
+          <AddDeliverablesPage />
         </Route>
         {/* The / should go last  */}
         <Route path="/">
