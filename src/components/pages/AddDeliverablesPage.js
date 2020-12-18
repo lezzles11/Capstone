@@ -87,6 +87,7 @@ function TimeInput({ placeholder }) {
 function Deliverable() {
   return (
     <div>
+      <hr />
       <div className="row">
         <h6>Deliverable 1</h6>
       </div>
