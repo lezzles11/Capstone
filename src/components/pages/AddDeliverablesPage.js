@@ -69,8 +69,14 @@ function TimeInput() {
         className="form-control amber-border"
         type="text"
         placeholder="00"
-        aria-label="Search"
+        aria-label="time"
       />
+      <small
+        id="time"
+        className="form-text text-muted mb-4"
+      >
+        Hours
+      </small>
       <div className="input-group-append">
         <span
           className="form-control btn-outline-warning waves-effect"
