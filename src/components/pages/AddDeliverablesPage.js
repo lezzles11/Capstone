@@ -152,6 +152,16 @@ export default function AddDeliverablesPage() {
       <br />
       <Deliverable />
       <Deliverable />
+      <div className="row">
+        <div className="offset-md-10">
+          <button
+            type="button"
+            className="btn btn-outline-primary waves-effect"
+          >
+            Save
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

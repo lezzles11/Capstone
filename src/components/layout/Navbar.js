@@ -12,6 +12,8 @@ import SignupPage from "../pages/SignupPage";
 import AddProjectPage from "../pages/AddProjectPage";
 import CalendarPage from "../pages/CalendarPage";
 import ProjectPage from "../pages/ProjectPage";
+import OngoingProjectsPage from "../pages/OngoingProjectsPage";
+import PastProjectsPage from "../pages/PastProjectsPage";
 import AddDeliverablesPage from "../pages/AddDeliverablesPage";
 
 function Nav() {
@@ -57,6 +59,19 @@ function Nav() {
           <li className="nav-item mx-2">
             <Link
               className="nav-link"
+              to="/ongoingprojects"
+            >
+              Ongoing Projects
+            </Link>
+          </li>
+          <li className="nav-item mx-2">
+            <Link className="nav-link" to="/pastprojects">
+              Past Projects
+            </Link>
+          </li>
+          <li className="nav-item mx-2">
+            <Link
+              className="nav-link"
               to="/adddeliverables"
             >
               Add Deliverables
@@ -92,6 +107,14 @@ function SwitchFunction() {
 
         <Route path="/adddeliverables">
           <AddDeliverablesPage />
+        </Route>
+
+        <Route path="/ongoingprojects">
+          <OngoingProjectsPage />
+        </Route>
+
+        <Route path="/pastprojects">
+          <PastProjectsPage />
         </Route>
         {/* The / should go last  */}
         <Route path="/">

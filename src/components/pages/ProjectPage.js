@@ -34,7 +34,7 @@ function Progress({ title }) {
         <Step
           title="Waiting"
           description="You can hover on the dot."
-        />
+        /> 
         <Step
           title="Waiting"
           description="You can hover on the dot."
