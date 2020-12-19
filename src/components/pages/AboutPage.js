@@ -17,22 +17,25 @@ function InfoCard() {
         <div className="row">
           <div className="col-md-4">
             <div className="row mb-3">
-              <div className="col-12">
-                <h5>
-                  <OneThingIcon /> Do One Thing At A Time
+              <div className="col-2">
+                {" "}
+                <OneThingIcon />
+              </div>
+              <div className="col-10">
+                <h5 className="font-weight-bold mb-3">
+                  Do One Thing At A Time
                 </h5>
                 <p className="grey-text">
-                  <OneThingIcon /> We are naturally very
-                  easily drawn off course and need all the
-                  help we can get to devote ourselves to
-                  tasks we are theoretically committed to.
-                  If we are to think and achieve to a high
-                  standard, we may need to make a lot of
-                  changes to our routines and the structure
-                  of our lives. We shouldn’t just blame our
-                  willpower. We can blame the whole
-                  architectural and social setup around the
-                  way we work.
+                  We are naturally very easily drawn off
+                  course and need all the help we can get to
+                  devote ourselves to tasks we are
+                  theoretically committed to. If we are to
+                  think and achieve to a high standard, we
+                  may need to make a lot of changes to our
+                  routines and the structure of our lives.
+                  We shouldn’t just blame our willpower. We
+                  can blame the whole architectural and
+                  social setup around the way we work.{" "}
                 </p>
               </div>
             </div>
@@ -82,9 +85,13 @@ function InfoCard() {
             </div>
           </div>
           <div className="col-md-4 text-center">
+            <br />
+            <br />
+            <br />
+            <br />
             <img
               className="img-fluid"
-              src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png"
+              src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios14-iphone11-pro-settings-home-app-library.jpg"
               alt="Sample image"
             />
           </div>

@@ -66,7 +66,9 @@ npm start
 
 ### How it works :open_book:
 
-![Image](https://www.dropbox.com/s/qssnbo02fau4wwc/Screen%20Shot%202020-07-27%20at%2014.01.49.png?raw=1)
+![About](https://www.dropbox.com/s/7trsarshd3czf4o/about.png?raw=1)
+![Add New Project](https://www.dropbox.com/s/eck9bepnl7vhsp4/addnewproject.png?raw=1)
+![Deliverable](https://www.dropbox.com/s/2jb3uem8jvd8vtz/deliverable.png?raw=1)
 
 ## Important Vocabulary
 
