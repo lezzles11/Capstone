@@ -34,7 +34,7 @@ function Progress({ title }) {
         <Step
           title="Waiting"
           description="You can hover on the dot."
-        /> 
+        />
         <Step
           title="Waiting"
           description="You can hover on the dot."
@@ -50,11 +50,69 @@ function Progress({ title }) {
   );
 }
 
+function MiniHeader({ title }) {
+  return (
+    <div>
+      <h5 className="font-weight-normal mb-3">{title}</h5>
+    </div>
+  );
+}
+
+function Item({ text }) {
+  return <p className="text-muted">{text}</p>;
+}
+function ProjectDescription() {
+  return (
+    <div>
+      <div className="row">
+        <h4>Project 1</h4>
+      </div>
+      <div className="row">
+        <MiniHeader title="Project Description" />
+      </div>
+      <div className="row">
+        <Item text="This application will fight procrastination and help you achieve your fullest potential!" />
+      </div>
+      <div className="row">
+        <div className="col">
+          <MiniHeader title="Delieverables" />
+
+          <Item text="Will be able to finish the UI" />
+        </div>
+        <div className="col">
+          <MiniHeader title="Deadline" />
+
+          <Item text="Jan 12, 2021" />
+        </div>
+        <div className="col">
+          <MiniHeader title="Completion Rate" />
+
+          <Item text="10%" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <MiniHeader title="Milestones" />
+          <Item text="Will be able to finish the UI" />
+        </div>
+        <div className="col">
+          <MiniHeader title="Deadline" />
+
+          <Item text="Jan 12, 2021" />
+        </div>
+        <div className="col">
+          <MiniHeader title="Completion Rate" />
+          <Item text="10%" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ProjectPage() {
   return (
     <div>
-      <h4> Current Projects</h4>
-      <br />
+      <ProjectDescription />
       <Progress title="Website Store" />
       <Progress title="Project Management Application" />
     </div>

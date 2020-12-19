@@ -15,6 +15,7 @@ import ProjectPage from "../pages/ProjectPage";
 import OngoingProjectsPage from "../pages/OngoingProjectsPage";
 import PastProjectsPage from "../pages/PastProjectsPage";
 import AddDeliverablesPage from "../pages/AddDeliverablesPage";
+import MilestonesPage from "../pages/MilestonesPage";
 
 function Nav() {
   return (
@@ -77,6 +78,11 @@ function Nav() {
               Add Deliverables
             </Link>
           </li>
+          <li className="nav-item mx-2">
+            <Link className="nav-link" to="/milestones">
+              Milestones
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -112,7 +118,9 @@ function SwitchFunction() {
         <Route path="/ongoingprojects">
           <OngoingProjectsPage />
         </Route>
-
+        <Route path="/milestones">
+          <MilestonesPage />
+        </Route>
         <Route path="/pastprojects">
           <PastProjectsPage />
         </Route>
