@@ -136,16 +136,10 @@ function TaskBreakdown() {
 
 export default function AddProjectPage() {
   return (
-    <div className="container z-depth-1">
-      <section className="text-center text-lg-left dark-grey-text">
-        <div>
-          <h4>Add Project Page</h4>
-          <h4>Features</h4>
-          <AddProjectForm />
-          <AddDeliverables />
-          <TaskBreakdown />
-        </div>
-      </section>
-    </div>
+    <section className="text-center text-lg-left dark-grey-text">
+      <div>
+        <AddProjectForm />
+      </div>
+    </section>
   );
 }

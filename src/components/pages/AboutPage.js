@@ -8,7 +8,8 @@ import OneThingIcon from "./components/icons/OneThingIcon";
 import StoryIcon from "./components/icons/StoryIcon";
 function InfoCard() {
   return (
-    <div className="container my-5 p-5 z-depth-1">
+    // <div className="container my-5 p-5 z-depth-1">
+    <div>
       <section className="dark-grey-text">
         <h2 className="text-center font-weight-bold mb-4 pb-2">
           Fighting Procrastination

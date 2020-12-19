@@ -27,11 +27,11 @@ function Nav() {
               Home
             </Link>
           </li>
-          <li className="nav-item mx-2">
+          {/* <li className="nav-item mx-2">
             <Link className="nav-link" to="/about">
               About
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item mx-2">
             <Link className="nav-link" to="/login">
               Login
@@ -107,9 +107,9 @@ function SwitchFunction() {
         <Route path="/login">
           <LoginPage />
         </Route>
-        <Route path="/about">
+        {/* <Route path="/about">
           <AboutPage />
-        </Route>
+        </Route> */}
 
         <Route path="/adddeliverables">
           <AddDeliverablesPage />
@@ -126,7 +126,7 @@ function SwitchFunction() {
         </Route>
         {/* The / should go last  */}
         <Route path="/">
-          <HomePage />
+          <AboutPage />
         </Route>
       </Switch>
     </div>

@@ -58,53 +58,128 @@ function MiniHeader({ title }) {
   );
 }
 
-function Item({ text }) {
-  return <p className="text-muted">{text}</p>;
+function Item({
+  styleOne,
+  styleTwo,
+  deliverable,
+  deadline,
+  completionRate,
+}) {
+  return (
+    <div className="row">
+      <div className="col">
+        <p style={styleOne} className="text-muted">
+          {deliverable}
+        </p>
+      </div>
+      <div className="col">
+        <p style={styleOne} className="text-muted">
+          {deadline}
+        </p>
+      </div>
+
+      <div className="col">
+        <p style={styleTwo} className="text-muted">
+          {completionRate}
+        </p>
+      </div>
+    </div>
+  );
+}
+function ProjectTitle({ titleOne, titleTwo, titleThree }) {
+  return (
+    <div className="row">
+      <div className="col">
+        <MiniHeader title={titleOne} />
+      </div>
+
+      <div className="col">
+        <MiniHeader title={titleTwo} />
+      </div>
+
+      <div className="col">
+        <MiniHeader title={titleThree} />
+      </div>
+    </div>
+  );
 }
 function ProjectDescription() {
   return (
     <div>
-      <div className="row">
-        <h4>Project 1</h4>
-      </div>
-      <div className="row">
-        <MiniHeader title="Project Description" />
-      </div>
-      <div className="row">
-        <Item text="This application will fight procrastination and help you achieve your fullest potential!" />
-      </div>
+      <h4>Say No To Procrastination</h4>
+      <ProjectTitle
+        titleOne="Deliverable 1"
+        titleTwo="Deadline"
+        titleThree="Completion Rate"
+      />
       <div className="row">
         <div className="col">
-          <MiniHeader title="Delieverables" />
+          <h5>Current Task:</h5>
+        </div>
+      </div>
+      <Item
+        styleTwo={{ borderTop: "8px solid green" }}
+        deliverable="UI"
+        deadline="Dec 18, 2020"
+        completionRate="60%"
+      />
+      <Item
+        deliverable="Testing"
+        deadline="Dec 18, 2020"
+        completionRate="60%"
+      />
+      <ProjectTitle
+        titleOne="Larger Checklist"
+        titleTwo="Deadline"
+        titleThree="Completion Rate"
+      />
 
-          <Item text="Will be able to finish the UI" />
-        </div>
-        <div className="col">
-          <MiniHeader title="Deadline" />
+      <Item
+        deliverable="Finish Functionality List"
+        deadline="Dec 18, 2020"
+        completionRate="80%"
+      />
+      <Item
+        deliverable="Finish wireframe"
+        deadline="Dec 18, 2020"
+        completionRate="100%"
+      />
+      <Item
+        deliverable="Code out the UI"
+        deadline="Dec 18, 2020"
+        completionRate="60%"
+      />
+      <Item
+        deliverable="Finish Testing"
+        deadline="Dec 18, 2020"
+        completionRate="0%"
+      />
+      <Item
+        deliverable="Create Database"
+        deadline="Dec 18, 2020"
+        completionRate="0%"
+      />
+      <Item
+        deliverable="Write down all relevant queries"
+        deadline="Dec 18, 2020"
+        completionRate="0%"
+      />
 
-          <Item text="Jan 12, 2021" />
-        </div>
-        <div className="col">
-          <MiniHeader title="Completion Rate" />
-
-          <Item text="10%" />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <MiniHeader title="Milestones" />
-          <Item text="Will be able to finish the UI" />
-        </div>
-        <div className="col">
-          <MiniHeader title="Deadline" />
-
-          <Item text="Jan 12, 2021" />
-        </div>
-        <div className="col">
-          <MiniHeader title="Completion Rate" />
-          <Item text="10%" />
-        </div>
-      </div>
+      <Item
+        deliverable="Plan out all relevant get/post/edit/delete routes"
+        deadline="Dec 28, 2020"
+        completionRate="0%"
+      />
+      <Item
+        deliverable="Write out all relevant get/post/edit/delete routes"
+        deadline="Dec 29, 2020"
+        completionRate="0%"
+      />
+      <Item
+        deliverable="Write out all relevant get/post/edit/delete routes"
+        deadline="Dec 29, 2020"
+        completionRate="0%"
+      />
     </div>
   );
 }

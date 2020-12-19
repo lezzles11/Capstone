@@ -96,28 +96,28 @@ function Form() {
 
 function Page() {
   return (
-    <section className="view">
-      <div className="row">
-        <div className="col-md-6">
-          <div className="view">
-            <img
-              src="https://images.pexels.com/photos/325045/pexels-photo-325045.jpeg"
-              className="img-fluid"
-              alt="smaple image"
-            />
-            <div className="mask flex-center hm-gradient"></div>
-          </div>
-        </div>
-
-        <div className="col-md-6">
-          <div className="d-flex flex-column justify-content-center  h-100">
-            {/* Form, here  */}
-
-            <Form />
-          </div>
+    // <section className="view">
+    <div className="row">
+      <div className="col-md-6">
+        <div className="view">
+          <img
+            src="https://images.pexels.com/photos/325045/pexels-photo-325045.jpeg"
+            className="img-fluid"
+            alt="smaple image"
+          />
+          <div className="mask flex-center hm-gradient"></div>
         </div>
       </div>
-    </section>
+
+      <div className="col-md-6">
+        <div className="d-flex flex-column justify-content-center  h-100">
+          {/* Form, here  */}
+
+          <Form />
+        </div>
+      </div>
+    </div>
+    // </section>
   );
 }
 export default function LoginPage() {

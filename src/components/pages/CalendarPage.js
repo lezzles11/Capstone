@@ -50,6 +50,10 @@ export default class CalendarPage extends Component {
   render() {
     return (
       <div>
+        <p>
+          This page would highlight all the ongoing projects
+          the user is currently going through{" "}
+        </p>
         <div
           className="justify-content-center"
           style={{ width: "50%" }}
