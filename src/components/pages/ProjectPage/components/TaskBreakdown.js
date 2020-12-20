@@ -4,7 +4,7 @@ function TableItem({ done, item }) {
   return (
     <tr>
       <th scope="row">
-        {done === true && (
+        {done === "true" && (
           <div className="form-check">
             <input
               className="form-check-input"
@@ -18,7 +18,7 @@ function TableItem({ done, item }) {
             </label>
           </div>
         )}{" "}
-        {done !== true && (
+        {done !== "true" && (
           <div className="form-check">
             <input
               className="form-check-input"
@@ -65,42 +65,50 @@ export default function TaskBreakdown({
             />
             <TableItem
               done="false"
-              item="Users will be able to input two emails, in which their friends will get regular updates of."
+              item="Users will be able to "
             />
             <TableItem
-              done={true}
+              done="true"
               item="Finish the home page"
             />
             <TableItem
-              done={true}
+              done="true"
               item="Finish the login page"
             />
             <TableItem
-              done={true}
+              done="true"
               item="Finish the signup page"
             />
             <TableItem
-              done={true}
+              done="true"
               item="Finish the calendar page"
             />
             <TableItem
-              done={true}
+              done="true"
               item="Finish the project page"
             />
             <TableItem
-              number={false}
+              done="true"
               item="Finish the ongoing projects page"
             />
             <TableItem
-              number={false}
+              done="true"
               item="Finish the past projects page"
             />
             <TableItem
-              number={false}
+              number="false"
+              item="Finish the ongoing projects page"
+            />
+            <TableItem
+              number="true"
+              item="Finish the past projects page"
+            />
+            <TableItem
+              number="false"
               item="Finish the Add Deliverables page"
             />
             <TableItem
-              number={false}
+              number="false"
               item="Finish the email page"
             />
           </tbody>

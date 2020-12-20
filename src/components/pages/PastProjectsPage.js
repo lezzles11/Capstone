@@ -4,10 +4,34 @@ function Cards() {
   return (
     <div className="container mt-5">
       <section className="">
+        <div className="flex-center">
+          <ul className="mb-0 list-unstyled">
+            <li>
+              <h2 className="h2-responsive">
+                A good life doesn’t require us to banish
+                procrastination entirely, it involves making
+                choices about where we will allow ourselves
+                to remain inefficient, in the name of having
+                a shot at excellence elsewhere.
+                <i
+                  className="fas fa-quote-right"
+                  aria-hidden="true"
+                ></i>
+              </h2>
+            </li>
+            <li className="mb-0">
+              <h5 className="text-center font-italic mb-0">
+                ~ The School of Life
+              </h5>
+            </li>
+          </ul>
+        </div>
+
+        <br />
+        <br />
         <h3 className="text-center font-weight-bold mb-5">
           Past Projects
         </h3>
-
         <div className="row">
           <div className="col-lg-4 col-md-12 mb-lg-0 mb-4">
             <div className="card hoverable">

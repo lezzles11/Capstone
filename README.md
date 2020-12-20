@@ -69,6 +69,8 @@ npm start
 ![About](https://www.dropbox.com/s/7trsarshd3czf4o/about.png?raw=1)
 ![Add New Project](https://www.dropbox.com/s/eck9bepnl7vhsp4/addnewproject.png?raw=1)
 ![Deliverable](https://www.dropbox.com/s/2jb3uem8jvd8vtz/deliverable.png?raw=1)
+![Past Projects](https://www.dropbox.com/s/r8o4ok9mmncfwal/Screen%20Shot%202020-12-21%20at%2000.22.49.png?raw=1)
+![Calendar](https://www.dropbox.com/s/e7v1gleoptpetzc/Screen%20Shot%202020-12-20%20at%2013.31.13.png?raw=1)
 
 ## Important Vocabulary
 

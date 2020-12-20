@@ -12,7 +12,7 @@ import SignupPage from "../pages/SignupPage";
 import AddProjectPage from "../pages/AddProjectPage";
 import CalendarPage from "../pages/CalendarPage/CalendarPage";
 import ProjectPage from "../pages/ProjectPage/ProjectPage";
-import OngoingProjectsPage from "../pages/OngoingProjectsPage";
+import OngoingProjectsPage from "../pages/OngoingProjectsPage/OngoingProjectsPage";
 import PastProjectsPage from "../pages/PastProjectsPage";
 import AddDeliverablesPage from "../pages/AddDeliverablesPage";
 import MilestonesPage from "../pages/MilestonesPage";
@@ -139,11 +139,12 @@ export default function Navbar() {
       <Nav />
       <h5>Deadline: Jan 12, 2021</h5>
       <h1>
-        CURRENT TASK: <h5>Finish Project Page</h5>
+        CURRENT TASK: <h5>Finish Ongoing Projects Page</h5>
       </h1>
       <h6>
         Finished tasks: home page, sign in page, sign up
-        page, add project page, calendar page :){" "}
+        page, add project page, calendar page, project page,
+        ongoing projects, past projects :){" "}
       </h6>
       <SwitchFunction />
     </div>
