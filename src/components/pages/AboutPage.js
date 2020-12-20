@@ -46,7 +46,7 @@ function InfoCard() {
               </div>
               <div className="col-10">
                 <h5 className="font-weight-bold mb-3">
-                  Use Checklists
+                  Self Awareness
                 </h5>
                 <p className="grey-text">
                   Our own productivity might be transformed
@@ -170,9 +170,15 @@ function InfoCard() {
           </div>
         </div>
       </section>
-      <div className="row">
+      <br />
+      <div className="row justify-content-end">
         <small className="form-text text-muted mb-4">
-          Taken from the school of life
+          <a
+            href="https://www.theschooloflife.com/thebookoflife/natureandcausesofprocrastination/"
+            target="_blank"
+          >
+            Taken from The School of Life
+          </a>
         </small>
       </div>
     </div>

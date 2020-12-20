@@ -54,21 +54,20 @@ function AddProjectForm() {
           >
             Write a quick mission statement.
           </small>
-          {/* id: deadline */}
+          {/* id: description */}
           <input
-            type="text"
-            id="deadline"
+            type="textarea"
+            id="description"
             className="form-control"
-            placeholder="Deadline"
-            aria-describedby="deadlineInput"
+            placeholder="Description"
+            aria-describedby="descriptionInput"
           />
           <small
-            id="deadlineInput"
+            id="descriptionInput"
             className="form-text text-muted mb-4"
           >
-            Deadline of Project
+            Technologies, Plans, Etc.
           </small>
-          {/* STARTING FORM */}
           <div className="form-row mb-4">
             <div className="col">
               {/* id: friendOne */}

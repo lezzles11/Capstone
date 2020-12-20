@@ -1,12 +1,27 @@
 import React, { Component, useState } from "react";
 import { format } from "date-fns";
 import { enGB } from "date-fns/locale";
+import { getDay } from "date-fns";
+import "./calendar.css";
 import {
   DateRangePickerCalendar,
   START_DATE,
 } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
-
+// Event Calendar Imports
+import FullCalendar, {
+  formatDate,
+} from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+const modifiers = {
+  //   disabled: (date) => getDay(date) === 6, // Disables Saturdays
+  highlight: (date) => getDay(date) === 2, // Highlights Tuesdays
+};
+const modifiersClassNames = {
+  highlight: "-highlight",
+};
 function DateRangePickerCalendarExample() {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
@@ -25,6 +40,8 @@ function DateRangePickerCalendarExample() {
         onEndDateChange={setEndDate}
         onFocusChange={handleFocusChange}
         locale={enGB}
+        modifiers={modifiers}
+        modifiersClassNames={modifiersClassNames}
       />
       <p>
         Selected start date:{" "}
@@ -44,23 +61,4 @@ function DateRangePickerCalendarExample() {
       </p>
     </div>
   );
-}
-
-export default class CalendarPage extends Component {
-  render() {
-    return (
-      <div>
-        <p>
-          This page would highlight all the ongoing projects
-          the user is currently going through{" "}
-        </p>
-        <div
-          className="justify-content-center"
-          style={{ width: "50%" }}
-        >
-          <DateRangePickerCalendarExample />
-        </div>
-      </div>
-    );
-  }
 }

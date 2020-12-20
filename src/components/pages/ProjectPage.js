@@ -133,7 +133,6 @@ function ProjectDescription() {
         titleTwo="Deadline"
         titleThree="Completion Rate"
       />
-
       <Item
         deliverable="Finish Functionality List"
         deadline="Dec 18, 2020"
@@ -163,16 +162,20 @@ function ProjectDescription() {
         deliverable="Write down all relevant queries"
         deadline="Dec 18, 2020"
         completionRate="0%"
-      />
-
+      />{" "}
       <Item
-        deliverable="Plan out all relevant get/post/edit/delete routes"
-        deadline="Dec 28, 2020"
+        deliverable="Write out all test database migrations and seeds"
+        deadline="Dec 29, 2020"
         completionRate="0%"
       />
       <Item
-        deliverable="Write out all relevant get/post/edit/delete routes"
+        deliverable="Write out all database migrations and seeds"
         deadline="Dec 29, 2020"
+        completionRate="0%"
+      />
+      <Item
+        deliverable="Plan out all relevant get/post/edit/delete routes"
+        deadline="Dec 28, 2020"
         completionRate="0%"
       />
       <Item
