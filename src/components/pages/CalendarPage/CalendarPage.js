@@ -76,22 +76,23 @@ function renderEventContent(eventInfo) {
 
 function renderSidebarEvent(event) {
   return (
-    <li
-      key={event.id}
-      className="list-group-item d-flex flex-column justify-content-between align-items-center"
-    >
-      <b>
+    <div className="form-check">
+      <input
+        className="form-check-input"
+        type="checkbox"
+        value=""
+        id={event.id}
+      />
+      <label className="form-check-label" for={event.id}>
+        {" "}
         {formatDate(event.start, {
           year: "numeric",
           month: "short",
           day: "numeric",
         })}
-      </b>
-      <i>{event.title}</i>
-      <span className="badge badge-primary badge-pill">
-        2
-      </span>
-    </li>
+        : <i>{event.title}</i>
+      </label>
+    </div>
   );
 }
 
@@ -105,15 +106,13 @@ class EventCalendar extends React.Component {
       <div className="demo-app-sidebar">
         <div className="demo-app-sidebar-section">
           <h2>
-            Current Feature: <br />
-            User Interface (
-            {this.state.currentEvents.length} tasks)
+            Current Project: <br />
+            <br />
+            Fight Procrastination! <br />(
+            {this.state.currentEvents.length} deliverables)
           </h2>
-          <ul className="list-group">
-            {this.state.currentEvents.map(
-              renderSidebarEvent
-            )}
-          </ul>
+          <br />
+          {this.state.currentEvents.map(renderSidebarEvent)}
         </div>
       </div>
     );

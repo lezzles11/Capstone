@@ -6,12 +6,12 @@ import {
   Link,
 } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-import AboutPage from "../pages/AboutPage";
+import AboutPage from "../pages/AboutPage/AboutPage";
 import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
 import AddProjectPage from "../pages/AddProjectPage";
 import CalendarPage from "../pages/CalendarPage/CalendarPage";
-import ProjectPage from "../pages/ProjectPage";
+import ProjectPage from "../pages/ProjectPage/ProjectPage";
 import OngoingProjectsPage from "../pages/OngoingProjectsPage";
 import PastProjectsPage from "../pages/PastProjectsPage";
 import AddDeliverablesPage from "../pages/AddDeliverablesPage";
@@ -52,17 +52,18 @@ function Nav() {
               Calendar
             </Link>
           </li>
-          <li className="nav-item mx-2">
-            <Link className="nav-link" to="/projects">
-              Projects
-            </Link>
-          </li>
+
           <li className="nav-item mx-2">
             <Link
               className="nav-link"
               to="/ongoingprojects"
             >
               Ongoing Projects
+            </Link>
+          </li>
+          <li className="nav-item mx-2">
+            <Link className="nav-link" to="/projects">
+              Project
             </Link>
           </li>
           <li className="nav-item mx-2">
@@ -138,12 +139,11 @@ export default function Navbar() {
       <Nav />
       <h5>Deadline: Jan 12, 2021</h5>
       <h1>
-        CURRENT TASK:{" "}
-        <h5>Finish add project calendar page</h5>
+        CURRENT TASK: <h5>Finish Project Page</h5>
       </h1>
       <h6>
         Finished tasks: home page, sign in page, sign up
-        page, add project page, :){" "}
+        page, add project page, calendar page :){" "}
       </h6>
       <SwitchFunction />
     </div>

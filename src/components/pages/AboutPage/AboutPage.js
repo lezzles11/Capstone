@@ -1,11 +1,11 @@
 import React from "react";
-import ChecklistIcon from "./components/icons/ChecklistIcon";
+import ChecklistIcon from "./icons/ChecklistIcon";
 
-import DeadlineIcon from "./components/icons/DeadlineIcon";
-import HeartIcon from "./components/icons/HeartIcon";
-import MusicIcon from "./components/icons/MusicIcon";
-import OneThingIcon from "./components/icons/OneThingIcon";
-import StoryIcon from "./components/icons/StoryIcon";
+import DeadlineIcon from "./icons/DeadlineIcon";
+import HeartIcon from "./icons/HeartIcon";
+import MusicIcon from "./icons/MusicIcon";
+import OneThingIcon from "./icons/OneThingIcon";
+import StoryIcon from "./icons/StoryIcon";
 function InfoCard() {
   return (
     // <div className="container my-5 p-5 z-depth-1">
