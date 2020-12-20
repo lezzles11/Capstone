@@ -14,18 +14,51 @@ let todayStr = new Date().toISOString().replace(/T.*$/, ""); // YYYY-MM-DD of to
 const INITIAL_EVENTS = [
   {
     id: createEventId(),
-    title: "All-day event",
-    start: todayStr,
+    title: "User Interface",
+    start: "2020-12-18" + "T12:00:00",
+    end: "2020-12-20" + "T12:00:00",
   },
   {
     id: createEventId(),
-    title: "Timed event",
-    start: todayStr + "T12:00:00",
-  },
-  {
-    id: createEventId(),
-    title: "Finish the ",
+    title: "Tests",
     start: "2020-12-21" + "T12:00:00",
+    end: "2020-12-23" + "T12:00:00",
+  },
+  {
+    id: createEventId(),
+    title: "Database",
+    start: "2020-12-24" + "T12:00:00",
+    end: "2020-12-25" + "T12:00:00",
+  },
+  {
+    id: createEventId(),
+    title: "API",
+    start: "2020-12-26" + "T12:00:00",
+    end: "2020-12-28" + "T12:00:00",
+  },
+  {
+    id: createEventId(),
+    title: "Redux Store (State management)",
+    start: "2020-12-29" + "T12:00:00",
+    end: "2020-12-31" + "T12:00:00",
+  },
+  {
+    id: createEventId(),
+    title: "Authentication",
+    start: "2021-01-01" + "T12:00:00",
+    end: "2021-01-03" + "T12:00:00",
+  },
+  {
+    id: createEventId(),
+    title: "Payment",
+    start: "2021-01-04" + "T12:00:00",
+    end: "2021-01-06" + "T12:00:00",
+  },
+  {
+    id: createEventId(),
+    title: "Deployment",
+    start: "2021-01-07" + "T12:00:00",
+    end: "2021-01-09" + "T12:00:00",
   },
 ];
 
@@ -43,7 +76,10 @@ function renderEventContent(eventInfo) {
 
 function renderSidebarEvent(event) {
   return (
-    <li key={event.id}>
+    <li
+      key={event.id}
+      className="list-group-item d-flex flex-column justify-content-between align-items-center"
+    >
       <b>
         {formatDate(event.start, {
           year: "numeric",
@@ -52,6 +88,9 @@ function renderSidebarEvent(event) {
         })}
       </b>
       <i>{event.title}</i>
+      <span className="badge badge-primary badge-pill">
+        2
+      </span>
     </li>
   );
 }
@@ -65,45 +104,12 @@ class EventCalendar extends React.Component {
     return (
       <div className="demo-app-sidebar">
         <div className="demo-app-sidebar-section">
-          <div className="d-flex justify-content-between">
-            <div className="col-11 text-truncate pl-0 mb-3">
-              <a className="font-weight-bold">
-                Instructions
-              </a>
-            </div>
-          </div>
-          <div className="single-news mb-3">
-            <div className="d-flex justify-content-between">
-              <div className="col-11 text-truncate pl-0 mb-3">
-                <a>24 Food Swaps That Slash Calories.</a>
-              </div>
-            </div>
-          </div>
-          <h2>Instructions</h2>
-          <ul>
-            <li>
-              Select dates and you will be prompted to
-              create a new event
-            </li>
-            <li>Drag, drop, and resize events</li>
-            <li>Click an event to delete it</li>
-          </ul>
-        </div>
-        <div className="demo-app-sidebar-section">
-          <label>
-            <input
-              type="checkbox"
-              checked={this.state.weekendsVisible}
-              onChange={this.handleWeekendsToggle}
-            ></input>
-            toggle weekends
-          </label>
-        </div>
-        <div className="demo-app-sidebar-section">
           <h2>
-            All Events ({this.state.currentEvents.length})
+            Current Feature: <br />
+            User Interface (
+            {this.state.currentEvents.length} tasks)
           </h2>
-          <ul>
+          <ul className="list-group">
             {this.state.currentEvents.map(
               renderSidebarEvent
             )}
@@ -154,10 +160,11 @@ class EventCalendar extends React.Component {
   render() {
     return (
       <div className="container">
-        {" "}
-        <div className="demo-app">
-          {this.renderSidebar()}
-          <div className="demo-app-main">
+        <div className="row">
+          <div className="col-3">
+            {this.renderSidebar()}
+          </div>
+          <div className="col-9">
             <FullCalendar
               plugins={[
                 dayGridPlugin,
@@ -188,6 +195,20 @@ class EventCalendar extends React.Component {
             */
             />
           </div>
+        </div>
+        <br />
+        <div className="row">
+          <h2>Instructions</h2>
+        </div>
+        <div className="row">
+          <ul>
+            <li>
+              Select dates and you will be prompted to
+              create a new event
+            </li>
+            <li>Drag, drop, and resize events</li>
+            <li>Click an event to delete it</li>
+          </ul>
         </div>
       </div>
     );
