@@ -1,8 +1,9 @@
 import React from "react";
 import TaskBreakdown from "./components/TaskBreakdown";
-import DeliverableModal from "./components/DeliverableModal";
+import EditDeliverableModal from "./components/EditDeliverableModal";
 import DeliverableTimeline from "./components/DeliverableTimeline";
-import SpringModal from "./components/SpringModal";
+import AddDeliverableModal from "./components/AddDeliverableModal";
+
 function ProjectCards() {
   return (
     <div>
@@ -86,8 +87,10 @@ export default function ProjectPage() {
       </div>
 
       <DeliverableTimeline />
-
-      <DeliverableModal name="Add Deliverable" />
+      <div className="row">
+        <AddDeliverableModal name="Add Deliverable" />
+        <EditDeliverableModal name="Edit Deliverables" />
+      </div>
       <ProjectCards />
     </div>
   );

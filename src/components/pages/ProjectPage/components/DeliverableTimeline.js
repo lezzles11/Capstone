@@ -3,6 +3,14 @@ import "antd/dist/antd.css";
 import { Steps, Popover } from "antd";
 const { Step } = Steps;
 
+/**********************************************
+ * Deliverable Timeline
+ * ==================================
+ * This would receive an array of deliverables
+ * deliverable is an object that contains
+ * 
+ ***********************************************/
+
 const customDot = (dot, { status, index }) => (
   <Popover
     content={
