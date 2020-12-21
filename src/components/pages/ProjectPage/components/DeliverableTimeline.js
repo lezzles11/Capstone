@@ -15,7 +15,7 @@ const customDot = (dot, { status, index }) => (
   </Popover>
 );
 
-export default function Timeline({ title }) {
+export default function DeliverableTimeline({ title }) {
   return (
     <div className="container">
       <br />

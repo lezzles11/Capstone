@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Navbar 1`] = `
+<div>
+  <Nav />
+  <h5>
+    Deadline: Jan 12, 2021
+  </h5>
+  <h1>
+    CURRENT TASK: 
+    <h5>
+      Finish Ongoing Projects Page
+    </h5>
+  </h1>
+  <h6>
+    Finished tasks: home page, sign in page, sign up page, add project page, calendar page, project page, ongoing projects, past projects :)
+     
+  </h6>
+  <SwitchFunction />
+</div>
+`;
+
+exports[`renders 1`] = `
+<div>
+  <Nav />
+  <h5>
+    Deadline: Jan 12, 2021
+  </h5>
+  <h1>
+    CURRENT TASK: 
+    <h5>
+      Finish Ongoing Projects Page
+    </h5>
+  </h1>
+  <h6>
+    Finished tasks: home page, sign in page, sign up page, add project page, calendar page, project page, ongoing projects, past projects :)
+     
+  </h6>
+  <SwitchFunction />
+</div>
+`;

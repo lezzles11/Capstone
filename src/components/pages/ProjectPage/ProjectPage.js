@@ -1,6 +1,8 @@
 import React from "react";
 import TaskBreakdown from "./components/TaskBreakdown";
-import Timeline from "./components/Timeline";
+import DeliverableModal from "./components/DeliverableModal";
+import DeliverableTimeline from "./components/DeliverableTimeline";
+import SpringModal from "./components/SpringModal";
 function ProjectCards() {
   return (
     <div>
@@ -50,7 +52,13 @@ function ProjectCards() {
       </div>
       <br />
       <div className="row">
-        <div className="col-12"></div>
+        <div className="col-12">
+          <Card
+            bigTitle="People holding me accountable"
+            smallTitle="Anubhav and Sam"
+            text="We have to tell others about our intentions and figuratively sign them up to expect a specific amount of progress from us by a particular date. We have to invite a degree of nagging from people with no prior interest in delivering it – because this is better than the alternative: wasting our lives. "
+          />
+        </div>
       </div>
     </div>
   );
@@ -76,7 +84,10 @@ export default function ProjectPage() {
       <div className="row justify-content-center">
         <h1>Current Project: Say No To Procrastination</h1>
       </div>
-      <Timeline title="Deliverables" />
+
+      <DeliverableTimeline />
+
+      <DeliverableModal name="Add Deliverable" />
       <ProjectCards />
     </div>
   );

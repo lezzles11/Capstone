@@ -1,4 +1,5 @@
 import React from "react";
+import SpringModal from "./SpringModal";
 
 function TableItem({ done, item }) {
   return (
@@ -33,6 +34,9 @@ function TableItem({ done, item }) {
         )}
       </th>
       <td>{item}</td>
+      <td>
+        <SpringModal name="Start 25 minute timer" />
+      </td>
     </tr>
   );
 }
@@ -51,6 +55,7 @@ export default function TaskBreakdown({
           <strong>{smallTitle} </strong>
         </h5>
         <p className="card-text">{text}</p>
+        <SpringModal name="Add Bite Sized Task" />
         <table className="table table-sm">
           <thead>
             <tr>

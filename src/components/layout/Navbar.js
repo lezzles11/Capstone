@@ -14,8 +14,9 @@ import CalendarPage from "../pages/CalendarPage/CalendarPage";
 import ProjectPage from "../pages/ProjectPage/ProjectPage";
 import OngoingProjectsPage from "../pages/OngoingProjectsPage/OngoingProjectsPage";
 import PastProjectsPage from "../pages/PastProjectsPage";
-import AddDeliverablesPage from "../pages/AddDeliverablesPage";
-import MilestonesPage from "../pages/MilestonesPage";
+import PaymentPage from "../pages/PaymentPage";
+// import AddDeliverablesPage from "../pages/components/AddDeliverablesPage";
+// import MilestonesPage from "../pages/components/MilestonesPage";
 
 function Nav() {
   return (
@@ -72,6 +73,11 @@ function Nav() {
             </Link>
           </li>
           <li className="nav-item mx-2">
+            <Link className="nav-link" to="/payment">
+              Payment
+            </Link>
+          </li>
+          {/* <li className="nav-item mx-2">
             <Link
               className="nav-link"
               to="/adddeliverables"
@@ -83,7 +89,7 @@ function Nav() {
             <Link className="nav-link" to="/milestones">
               Milestones
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
@@ -93,6 +99,9 @@ function SwitchFunction() {
   return (
     <div className="container">
       <Switch>
+        <Route path="/payment">
+          <PaymentPage />
+        </Route>
         <Route path="/projects">
           <ProjectPage />
         </Route>
@@ -112,16 +121,16 @@ function SwitchFunction() {
           <AboutPage />
         </Route> */}
 
-        <Route path="/adddeliverables">
+        {/* <Route path="/adddeliverables">
           <AddDeliverablesPage />
-        </Route>
+        </Route> */}
 
         <Route path="/ongoingprojects">
           <OngoingProjectsPage />
         </Route>
-        <Route path="/milestones">
+        {/* <Route path="/milestones">
           <MilestonesPage />
-        </Route>
+        </Route> */}
         <Route path="/pastprojects">
           <PastProjectsPage />
         </Route>
@@ -139,12 +148,12 @@ export default function Navbar() {
       <Nav />
       <h5>Deadline: Jan 12, 2021</h5>
       <h1>
-        CURRENT TASK: <h5>Finish Ongoing Projects Page</h5>
+        CURRENT TASK: <h5>Finish writing database</h5>
       </h1>
       <h6>
         Finished tasks: home page, sign in page, sign up
         page, add project page, calendar page, project page,
-        ongoing projects, past projects :){" "}
+        ongoing projects, past projects, payment page :){" "}
       </h6>
       <SwitchFunction />
     </div>
