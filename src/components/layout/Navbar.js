@@ -15,6 +15,7 @@ import ProjectPage from "../pages/ProjectPage/ProjectPage";
 import OngoingProjectsPage from "../pages/OngoingProjectsPage/OngoingProjectsPage";
 import PastProjectsPage from "../pages/PastProjectsPage";
 import PaymentPage from "../pages/PaymentPage";
+import FeaturePage from "../pages/FeaturePage/FeaturePage";
 // import AddDeliverablesPage from "../pages/components/AddDeliverablesPage";
 // import MilestonesPage from "../pages/components/MilestonesPage";
 
@@ -68,6 +69,11 @@ function Nav() {
             </Link>
           </li>
           <li className="nav-item mx-2">
+            <Link className="nav-link" to="/feature">
+              Feature
+            </Link>
+          </li>
+          <li className="nav-item mx-2">
             <Link className="nav-link" to="/pastprojects">
               Past Projects
             </Link>
@@ -104,6 +110,10 @@ function SwitchFunction() {
         </Route>
         <Route path="/projects">
           <ProjectPage />
+        </Route>
+
+        <Route path="/feature">
+          <FeaturePage />
         </Route>
         <Route path="/calendar">
           <CalendarPage />

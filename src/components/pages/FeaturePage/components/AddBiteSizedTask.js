@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import { useSpring, animated } from "react-spring/web.cjs";
 import PropTypes from "prop-types";
-// web.cjs is required for IE 11 support
+
+//
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -57,7 +58,40 @@ Fade.propTypes = {
   onExited: PropTypes.func,
 };
 
-export default function TimerModal({ name }) {
+function AddProjectForm() {
+  return (
+    <div className="row d-flex justify-content-center">
+      <div className="col-md-12">
+        <form className="text-center" action="#!">
+          <p className="h4 mb-4">Add Bite Sized Task</p>
+          {/* id: projectName */}
+          {/* id: purpose */}
+          <input
+            type="text"
+            id="taskInput"
+            className="form-control"
+            placeholder="Bite-sized Task"
+            aria-describedby="taskInput"
+          />
+          <small
+            id="taskInput"
+            className="form-text text-muted mb-4"
+          >
+            What will be done in 25 minutes?
+          </small>
+
+          <button
+            className="btn btn-info my-4 btn-block"
+            type="submit"
+          >
+            Let's Execute
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+export default function AddBiteSizedTask({ name }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -92,7 +126,7 @@ export default function TimerModal({ name }) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            25 minute timer here
+            <AddProjectForm />
           </div>
         </Fade>
       </Modal>

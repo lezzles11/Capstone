@@ -1,7 +1,8 @@
 import React from "react";
-import SpringModal from "./SpringModal";
-import AddTaskModal from "./AddTaskModal";
+import AddTaskModal from "./AddBiteSizedTask";
 import TimerModal from "./TimerModal";
+import ArrowUp from "../../components/icons/ArrowUp";
+import ArrowDown from "../../components/icons/ArrowDown";
 function TableItem({ done, item }) {
   return (
     <tr>
@@ -36,12 +37,16 @@ function TableItem({ done, item }) {
       </th>
       <td>{item}</td>
       <td>
+        <ArrowUp />
+        <ArrowDown />
+      </td>
+      <td>
         <TimerModal name="Start 25 minute timer" />
       </td>
     </tr>
   );
 }
-export default function TaskBreakdown({
+export default function TaskBreakdownTable({
   bigTitle,
   smallTitle,
   text,
@@ -62,6 +67,10 @@ export default function TaskBreakdown({
             <tr>
               <th scope="col">Done?</th>
               <th scope="col">Task</th>
+
+              <th scope="col">Sort</th>
+
+              <th scope="col">Timer</th>
             </tr>
           </thead>
           <tbody>

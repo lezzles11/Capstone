@@ -8,7 +8,6 @@ export default function SignupPage() {
           <div className="col-md-6">
             <form className="text-center" action="#!">
               <p className="h4 mb-4">Sign up</p>
-
               <div className="form-row mb-4">
                 <div className="col">
                   <input
@@ -27,14 +26,14 @@ export default function SignupPage() {
                   />
                 </div>
               </div>
-
               <input
                 type="email"
                 id="defaultRegisterFormEmail"
                 className="form-control mb-4"
                 placeholder="E-mail"
               />
-
+              make small text on the left, and then make the
+              text in the placeholder light grey{" "}
               <input
                 type="password"
                 id="defaultRegisterFormPassword"
@@ -48,7 +47,6 @@ export default function SignupPage() {
               >
                 At least 8 characters and 1 digit
               </small>
-
               <div className="custom-control custom-checkbox">
                 <input
                   type="checkbox"
@@ -62,7 +60,6 @@ export default function SignupPage() {
                   I'm ready to execute
                 </label>
               </div>
-
               <button
                 className="btn btn-info my-4 btn-block"
                 type="submit"
