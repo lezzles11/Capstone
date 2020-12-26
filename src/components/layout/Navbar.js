@@ -16,6 +16,7 @@ import OngoingProjectsPage from "../pages/OngoingProjectsPage/OngoingProjectsPag
 import PastProjectsPage from "../pages/PastProjectsPage";
 import PaymentPage from "../pages/PaymentPage";
 import FeaturePage from "../pages/FeaturePage/FeaturePage";
+import PlaygroundPage from "../pages/PlaygroundPage/PlaygroundPage";
 // import AddDeliverablesPage from "../pages/components/AddDeliverablesPage";
 // import MilestonesPage from "../pages/components/MilestonesPage";
 
@@ -24,6 +25,11 @@ function Nav() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light blue lighten-4">
         <ul className="navbar-nav mr-auto">
+          <li className="nav-item mx-2">
+            <Link className="nav-link" to="/playground">
+              Playground
+            </Link>
+          </li>
           <li className="nav-item mx-2">
             <Link className="nav-link" to="/">
               Home
@@ -39,6 +45,7 @@ function Nav() {
               Login
             </Link>
           </li>
+
           <li className="nav-item mx-2">
             <Link className="nav-link" to="/signup">
               Signup
@@ -105,6 +112,9 @@ function SwitchFunction() {
   return (
     <div className="container">
       <Switch>
+        <Route path="/playground">
+          <PlaygroundPage />
+        </Route>
         <Route path="/payment">
           <PaymentPage />
         </Route>
