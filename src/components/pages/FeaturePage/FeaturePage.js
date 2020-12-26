@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ProjectCards from "./components/ProjectCards";
 import Card from "./components/Card";
+import { connect } from "react-redux";
+import { deleteFeature } from "../../../redux/actions/featureActions";
 import TaskBreakdownTable from "./components/TaskBreakdownTable";
 const initialState = [
   {
@@ -278,6 +280,11 @@ const initialState = [
 ];
 
 class FeatureList extends Component {
+  deleteFeature = (event) => {
+    this.props.deleteFeature(
+      parseInt(event.target.getAttribute("data-id"))
+    );
+  };
   loadFeatures = (features) => {
     let featureList = [];
     for (let i = 0; i < features.length; i++) {
@@ -327,6 +334,14 @@ class FeatureList extends Component {
               />
             </div>
           </div>
+          <button
+            type="button"
+            data-id={features[i].id}
+            onClick={this.deleteFeature}
+            className="btn btn-outline-dark waves-effect"
+          >
+            Delete Feature
+          </button>
         </div>
       );
     }
@@ -341,9 +356,14 @@ class FeatureList extends Component {
 const FeaturePage = () => {
   return (
     <div>
-      <FeatureList features={initialState} />
+      <FeatureList />
     </div>
   );
 };
 
-export default FeaturePage;
+const mapStateToProps = (state) => ({
+  features: state.features,
+});
+export default connect(mapStateToProps, { deleteFeature })(
+  FeatureList
+);
