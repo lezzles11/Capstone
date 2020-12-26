@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import "antd/dist/antd.css";
 import { Steps, Popover } from "antd";
+import { connect } from "react-redux";
 const { Step } = Steps;
 
 /**********************************************
@@ -8,7 +9,7 @@ const { Step } = Steps;
  * ==================================
  * This would receive an array of deliverables
  * deliverable is an object that contains
- * 
+ *
  ***********************************************/
 
 const customDot = (dot, { status, index }) => (
@@ -23,11 +24,49 @@ const customDot = (dot, { status, index }) => (
   </Popover>
 );
 
-export default function DeliverableTimeline({ title }) {
-  return (
+class DeliverableTimeline extends Component {
+  loadFeatures = (features) => {
+    let list = [];
+    for (let i = 0; i < features.length; i++) {
+      console.log(features[i]);
+      list.push(
+        <Step
+          title={features[i].title}
+          description={features[i].tools}
+        />
+      );
+    }
+    return list;
+  };
+  render() {
+    let features = this.props.features;
+    return (
+      <div>
+        <div className="container">
+          <br />
+          <h5>Timeline</h5>
+          <Steps current={0} progressDot={customDot}>
+            {this.loadFeatures(features)}
+          </Steps>
+          <br />
+        </div>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  features: state.features,
+});
+export default connect(
+  mapStateToProps,
+  null
+)(DeliverableTimeline);
+{
+  /* return (
     <div className="container">
       <br />
-      <h5>{title}</h5>
+      <h5>Timeline</h5>
       <br />
       <Steps current={0} progressDot={customDot}>
         <Step
@@ -62,137 +101,5 @@ export default function DeliverableTimeline({ title }) {
       <br />
     </div>
   );
+} */
 }
-
-// function MiniHeader({ title }) {
-//   return (
-//     <div>
-//       <h5 className="font-weight-normal mb-3">{title}</h5>
-//     </div>
-//   );
-// }
-
-// function Item({
-//   styleOne,
-//   styleTwo,
-//   deliverable,
-//   deadline,
-//   completionRate,
-// }) {
-//   return (
-//     <div className="row">
-//       <div className="col">
-//         <p style={styleOne} className="text-muted">
-//           {deliverable}
-//         </p>
-//       </div>
-//       <div className="col">
-//         <p style={styleOne} className="text-muted">
-//           {deadline}
-//         </p>
-//       </div>
-
-//       <div className="col">
-//         <p style={styleTwo} className="text-muted">
-//           {completionRate}
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-// function ProjectTitle({ titleOne, titleTwo, titleThree }) {
-//   return (
-//     <div className="row">
-//       <div className="col">
-//         <MiniHeader title={titleOne} />
-//       </div>
-
-//       <div className="col">
-//         <MiniHeader title={titleTwo} />
-//       </div>
-
-//       <div className="col">
-//         <MiniHeader title={titleThree} />
-//       </div>
-//     </div>
-//   );
-// }
-// export default function Timeline() {
-//   return (
-//     <div>
-//       <h4>Say No To Procrastination</h4>
-//       <ProjectTitle
-//         titleOne="Deliverable 1"
-//         titleTwo="Deadline"
-//         titleThree="Completion Rate"
-//       />
-//       <div className="row">
-//         <div className="col">
-//           <h5>Current Task:</h5>
-//         </div>
-//       </div>
-//       <Item
-//         styleTwo={{ borderTop: "8px solid green" }}
-//         deliverable="UI"
-//         deadline="Dec 18, 2020"
-//         completionRate="60%"
-//       />
-//       <ProjectCards />
-//       <ProjectTitle
-//         titleOne="Larger Checklist"
-//         titleTwo="Deadline"
-//         titleThree="Completion Rate"
-//       />
-//       <Item
-//         deliverable="Finish Functionality List"
-//         deadline="Dec 18, 2020"
-//         completionRate="80%"
-//       />
-//       <Item
-//         deliverable="Finish wireframe"
-//         deadline="Dec 18, 2020"
-//         completionRate="100%"
-//       />
-//       <Item
-//         deliverable="Code out the UI"
-//         deadline="Dec 18, 2020"
-//         completionRate="60%"
-//       />
-//       <Item
-//         deliverable="Finish Testing"
-//         deadline="Dec 18, 2020"
-//         completionRate="0%"
-//       />
-//       <Item
-//         deliverable="Create Database"
-//         deadline="Dec 18, 2020"
-//         completionRate="0%"
-//       />
-//       <Item
-//         deliverable="Write down all relevant queries"
-//         deadline="Dec 18, 2020"
-//         completionRate="0%"
-//       />{" "}
-//       <Item
-//         deliverable="Write out all test database migrations and seeds"
-//         deadline="Dec 29, 2020"
-//         completionRate="0%"
-//       />
-//       <Item
-//         deliverable="Write out all database migrations and seeds"
-//         deadline="Dec 29, 2020"
-//         completionRate="0%"
-//       />
-//       <Item
-//         deliverable="Plan out all relevant get/post/edit/delete routes"
-//         deadline="Dec 28, 2020"
-//         completionRate="0%"
-//       />
-//       <Item
-//         deliverable="Write out all relevant get/post/edit/delete routes"
-//         deadline="Dec 29, 2020"
-//         completionRate="0%"
-//       />
-//     </div>
-//   );
-// }

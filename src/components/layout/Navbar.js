@@ -175,21 +175,14 @@ export default function Navbar() {
             Change all components so that they will accept
             an array of objects
           </li>
-          <li>
-            For features: Have the timeline at the top, and
-            when you click on it, it will render that
-            feature{" "}
-          </li>
-          <li>
-            First, create a feature component that accepts
-            an object{" "}
-          </li>
         </ol>
       </h1>
       <h6>
         Finished tasks: home page, sign in page, sign up
         page, add project page, calendar page, project page,
-        ongoing projects, past projects, payment page :){" "}
+        ongoing projects, past projects, payment page, redux
+        connect features to timeline, redux connect features
+        project page, redux connect to calendar :){" "}
       </h6>
       <SwitchFunction />
     </div>
