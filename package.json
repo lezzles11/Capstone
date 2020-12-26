@@ -20,6 +20,7 @@
     "fullcalendar": "^5.5.0",
     "fullcalendar-scheduler": "^5.5.0",
     "jest": "26.6.0",
+    "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "passport": "^0.4.1",
@@ -28,6 +29,7 @@
     "react": "^17.0.1",
     "react-awesome-calendar": "^1.0.14",
     "react-big-calendar": "^0.30.0",
+    "react-component-countdown-timer": "^0.1.8",
     "react-dom": "^17.0.1",
     "react-event-calendar": "^0.3.0",
     "react-nice-dates": "^3.0.7",
@@ -38,6 +40,7 @@
     "react-test-renderer": "^17.0.1",
     "react_google_calendar": "^2.2.4444",
     "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "web-vitals": "^0.2.4"
   },

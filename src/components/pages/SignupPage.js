@@ -14,15 +14,7 @@ export default function SignupPage() {
                     type="text"
                     id="defaultRegisterFormFirstName"
                     className="form-control"
-                    placeholder="First name"
-                  />
-                </div>
-                <div className="col">
-                  <input
-                    type="text"
-                    id="defaultRegisterFormLastName"
-                    className="form-control"
-                    placeholder="Last name"
+                    placeholder="name"
                   />
                 </div>
               </div>

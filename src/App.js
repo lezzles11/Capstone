@@ -4,14 +4,19 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/layout/Footer";
 function App() {
   return (
-    <Router>
-      <div>
-        <Navbar />
-      </div>
+    <div>
+      <Router>
+        <div>
+          <Navbar />
+        </div>
+        <br />
+        <br />
+      </Router>
       <br />
       <br />
+
       <Footer />
-    </Router>
+    </div>
   );
 }
 
