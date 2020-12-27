@@ -30,6 +30,7 @@ class DeliverableTimeline extends Component {
     for (let i = 0; i < features.length; i++) {
       console.log(features[i]);
       list.push(
+        // pass in features
         <Step
           title={features[i].title}
           description={features[i].tools}

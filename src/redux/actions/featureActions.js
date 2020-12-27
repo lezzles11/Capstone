@@ -18,3 +18,4 @@ export const deleteFeature = (id) => ({
   type: DELETE_FEATURE,
   payload: id,
 });
+

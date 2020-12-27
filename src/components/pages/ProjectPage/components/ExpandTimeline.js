@@ -1,14 +1,8 @@
-import {
-  ADD_FEATURE,
-  EDIT_FEATURE,
-  DELETE_FEATURE,
-} from "../actions/types";
+import React, { Component } from "react";
 
 const initialState = [
   {
     id: 1,
-    user_id: 1,
-    project_id: 1,
     title: "User Interface",
     keyInfo: "",
     tools: "MDBootstrap, Bootstrap",
@@ -16,7 +10,6 @@ const initialState = [
       "Users will be able to visualize the entire user interface and understand how the user flow works.",
     notes: "",
     structure: "",
-    done: false,
     tasks: [
       {
         id: 1,
@@ -44,45 +37,6 @@ const initialState = [
   },
   {
     id: 2,
-    user_id: 1,
-    project_id: 1,
-    title: "Redux Store (State management)",
-    keyInfo: "",
-    tools: "React-Redux, Redux",
-    description:
-      "Users will be able to understand how state is passed throughout the application.",
-    notes: "",
-    structure: "",
-    done: false,
-    tasks: [
-      {
-        id: 1,
-        task: "Finish the signup page",
-        done: true,
-      },
-      {
-        id: 2,
-        task: "Finish the calendar page",
-        done: true,
-      },
-      {
-        id: 3,
-        task: "Finish the calendar page",
-        done: true,
-      },
-      {
-        id: 4,
-        task: "Finish the ongoing projects page",
-        done: true,
-      },
-    ],
-    start: "2020-12-29" + "T12:00:00",
-    end: "2020-12-31" + "T12:00:00",
-  },
-  {
-    id: 5,
-    user_id: 1,
-    project_id: 1,
     title: "Tests",
     keyInfo: "",
     tools: "Enzyme, Jest",
@@ -90,7 +44,6 @@ const initialState = [
       "Users will be able to understand how to test react, react-redux, express, and database components.",
     notes: "",
     structure: "",
-    done: false,
     tasks: [
       {
         id: 1,
@@ -118,8 +71,6 @@ const initialState = [
   },
   {
     id: 3,
-    user_id: 1,
-    project_id: 1,
     title: "Database",
     keyInfo: "",
     tools: "Knex, Postgres",
@@ -127,7 +78,6 @@ const initialState = [
       "Users will be able to understand how to construct a user flow",
     notes: "",
     structure: "",
-    done: false,
     tasks: [
       {
         id: 1,
@@ -155,8 +105,6 @@ const initialState = [
   },
   {
     id: 4,
-    user_id: 1,
-    project_id: 1,
     title: "API",
     keyInfo: "",
     tools: "Express, Axios",
@@ -164,7 +112,6 @@ const initialState = [
       "Users will be able to see how the routes connect with one another.",
     notes: "",
     structure: "",
-    done: false,
     tasks: [
       {
         id: 1,
@@ -190,11 +137,42 @@ const initialState = [
     start: "2020-12-26" + "T12:00:00",
     end: "2020-12-28" + "T12:00:00",
   },
-
+  {
+    id: 5,
+    title: "Redux Store (State management)",
+    keyInfo: "",
+    tools: "React-Redux, Redux",
+    description:
+      "Users will be able to understand how state is passed throughout the application.",
+    notes: "",
+    structure: "",
+    tasks: [
+      {
+        id: 1,
+        task: "Finish the signup page",
+        done: true,
+      },
+      {
+        id: 2,
+        task: "Finish the calendar page",
+        done: true,
+      },
+      {
+        id: 3,
+        task: "Finish the calendar page",
+        done: true,
+      },
+      {
+        id: 4,
+        task: "Finish the ongoing projects page",
+        done: true,
+      },
+    ],
+    start: "2020-12-29" + "T12:00:00",
+    end: "2020-12-31" + "T12:00:00",
+  },
   {
     id: 6,
-    user_id: 1,
-    project_id: 1,
     title: "Authentication",
     keyInfo: "",
     tools: "JWT",
@@ -202,7 +180,6 @@ const initialState = [
       "Users will be able to understand how users are authenticated.",
     notes: "",
     structure: "",
-    done: false,
     tasks: [
       {
         id: 1,
@@ -230,8 +207,6 @@ const initialState = [
   },
   {
     id: 7,
-    user_id: 1,
-    project_id: 1,
     title: "Payment",
     keyInfo: "",
     tools: "Stripe",
@@ -239,7 +214,6 @@ const initialState = [
       "Users will be able how to implement payment for their applications.",
     notes: "",
     structure: "",
-    done: false,
     tasks: [
       {
         id: 1,
@@ -267,8 +241,6 @@ const initialState = [
   },
   {
     id: 8,
-    user_id: 1,
-    project_id: 1,
     title: "Deployment",
     keyInfo: "",
     tools: "AWS",
@@ -276,7 +248,6 @@ const initialState = [
       "Users will be able to understand how to deploy their applications.",
     notes: "",
     structure: "",
-    done: false,
     tasks: [
       {
         id: 1,
@@ -303,31 +274,44 @@ const initialState = [
     end: "2021-01-09" + "T12:00:00",
   },
 ];
-const featureReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_FEATURE:
-      return [
-        ...state,
-        { ...action.payload, id: generateID(state) },
-      ];
-    case DELETE_FEATURE:
-      return state.filter(
-        (feature) => feature.id !== action.payload
-      );
-    // #TODO: MARK AS DONE -> send out email
-    // #TODO: ADD TASK
-    // #TODO: MARK TASK AS DONE
-    // #TODO: MARK
-    default:
-      return state;
-  }
-};
-let generateID = (orders) => {
-  let lastId = 0;
-  if (orders.length > 0) {
-    lastId = orders[orders.length - 1].id;
-  }
-  return ++lastId;
-};
+// pass in the object, and create the component instead, so try to create a step component in which when you click on it, it will expand
+// you might have to track which items is currently selected
+// if that item is selected, then it would render that component
 
-export default featureReducer;
+function Demo() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={handleOpen}
+        className="btn btn-outline-dark waves-effect"
+      >
+              Open
+      </button>
+          <div></div>
+    </div>
+  );
+}
+class ExpandTimeline extends Component {
+  onClick = () => {
+    this.props.onClick(this.props.label);
+  };
+
+  render() {
+    const features = this.props.features;
+    return (
+      <div>
+        <h1>
+          Expand timeline - when you click on the timeline,
+          the hover page will open{" "}
+        </h1>
+      </div>
+    );
+  }
+}
+
+export default ExpandTimeline;

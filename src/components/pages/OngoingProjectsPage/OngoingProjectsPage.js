@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 function Sun() {
   return (
@@ -35,24 +36,23 @@ function ProgressCard() {
     </div>
   );
 }
+// deadline, purpose, friendOneEmail, friendTwoEmail,
 function ProjectCard({
   name,
   color,
   deadline,
-  time,
-  priority,
-  percent,
+  purpose,
+  friendOneEmail,
+  friendTwoEmail,
 }) {
   const style = `card ${color} lighten-3`;
-  const percentile = {
-    width: `${percent}%`,
-  };
+
   return (
     <div className={style}>
       <div className="card-body pb-0">
         <Sun />
         <h6 className="font-weight-bold mb-1">
-          {priority} priority
+          {deadline}
         </h6>
         <div className="d-flex justify-content-between">
           <p className="mb-0 h5">{name}</p>
@@ -61,75 +61,78 @@ function ProjectCard({
       </div>
       <div className="card-body pt-0">
         <br />
-        <div className="progress md-progress">
-          <div
-            className="progress-bar bg grey darken-3"
-            role="progressbar"
-            style={percentile}
-            aria-valuenow={percent}
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
+        <p className="mb-0">{purpose}</p>
+        <hr className="my-4" />
+        <div className="row text-center">
+          <div className="col-md-6 mb-5">
+            <div className="mt-3">
+              <h6 className="font-weight-bold mb-3">
+                {friendOneEmail}
+              </h6>
+              <p className="text-muted mb-0">
+                Will be notified on {deadline}
+              </p>
+            </div>
+          </div>
+          <div className="col-md-6 mb-5">
+            <div className="mt-3">
+              <h6 className="font-weight-bold mb-3">
+                {friendTwoEmail}
+              </h6>
+              <p className="text-muted mb-lg-0">
+                Will be notified on {deadline}
+              </p>
+            </div>
+          </div>
         </div>
-        <p>{percent}% done</p>
-        <p className="mb-0">{time} spent</p>
       </div>
     </div>
   );
 }
-export default function OngoingProjectsPage() {
-  return (
-    <div>
-      <div className="row justify-content-center">
-        <h1>Ongoing Projects</h1>
-      </div>
-      <br />
-      <div className="row">
-        <div className="col-6">
-          <ProjectCard
-            percent="10"
-            name="Say No To Procrastination"
-            priority="high"
-            time="3 days, 2 hours"
-            deadline="Jan 12"
-            color="orange"
-          />
-        </div>
-        <div className="col-6">
-          <ProjectCard
-            name="Glasses Website"
-            priority="medium"
-            percent="0"
-            time="0"
-            deadline="July 23"
-            color="blue"
-          />
-        </div>
-      </div>
-      <br />
-      <div className="row">
-        <div className="col-6">
-          <ProjectCard
-            percent="75"
-            deadline="Dec 12"
-            name="Finish Videos"
-            priority="high"
-            time="2 days"
-            color="indigo"
-          />
-        </div>
 
+class OngoingProjectsPage extends Component {
+  loadProjects = (projects) => {
+    let projectList = [];
+    for (let i = 0; i < projects.length; i++) {
+      //   if (projects[i].done === true) {
+      projectList.push(
         <div className="col-6">
           <ProjectCard
-            percent="0"
-            name="Learn Ukelele"
-            time="4 days"
-            priority="low"
-            deadline="Dec 11"
-            color="pink"
+            name={projects[i].name}
+            purpose={projects[i].purpose}
+            friendOneEmail={projects[i].friendOneEmail}
+            friendTwoEmail={projects[i].friendTwoEmail}
+            deadline={projects[i].deadline}
+            color={projects[i].color}
           />
+          <br />
+        </div>
+      );
+      //   }
+    }
+    return projectList;
+  };
+  render() {
+    let projects = this.props.projects;
+    return (
+      <div>
+        <div className="row justify-content-center">
+          <h1>Ongoing Projects</h1>
+        </div>
+        <br />
+        <div className="row flex">
+          {this.loadProjects(projects)}
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+const mapStateToProps = (state) => ({
+  projects: state.projects,
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(OngoingProjectsPage);

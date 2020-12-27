@@ -8,7 +8,6 @@ Component rendering
 
 - [ ] Example of testing component
   - [ ] Shallow rendering (Returns the component)
-  - [ ] 
 - [ ] Testing that a component utilizes map function
 - [ ] Testing that a component contains another component
 - [ ] Testing that a handler works

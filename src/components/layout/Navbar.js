@@ -172,8 +172,8 @@ export default function Navbar() {
         <h5>Finish connecting redux to components</h5>
         <ol>
           <li>
-            Change all components so that they will accept
-            an array of objects
+            Connect past project and ongoing projects to
+            redux
           </li>
         </ol>
       </h1>

@@ -2,34 +2,24 @@
 
 Deadline: Jan 12, 2021
 Benchmark Deadline for UI: Dec 20
+What I learned:
 
-- [ ] Add New
-- [ ] Dashboard
-- [ ] Landing
-- [ ] Login
-- [ ] Milestones
-- [ ] Ongoing Dashboard
-- [ ] Project Description
-- [ ] Timer
+- Better ensure that the frontend completely works before using redux
+- Perhaps best to write out database objects before creating UI
 
-Benchmark Deadline for Testing: Dec 23
+Benchmark Deadline for Redux: Dec 27
 
-- [ ] Frontend Testing Components
-- [ ] Backend Testing Database
-- [ ] Testing Routes
-- [ ] Backend Testing Authentication
-- [ ] Frontend Testing States
+- Really helpful to use a template when connect redux with react
+- 
 
-Benchmark Deadline for Database: Dec 25
+Benchmark Deadline for Database: Dec 30
 
-- [ ] Set up database diagram
-- [ ] Write down all queries
-- [ ]
-
-Benchmark Deadline for API: Dec 28
 Benchmark Deadline for Authentication: Dec 31
+
 Benchmark Deadline for Redux: Jan 5
+
 Benchmark Deadline for Payment: Jan 10
+
 Benchmark Deadline for Deployment: Jan 12
 
 ## Purpose :dark_sunglasses:

@@ -54,20 +54,6 @@ function AddProjectForm() {
           >
             Write a quick mission statement.
           </small>
-          {/* id: description */}
-          <input
-            type="textarea"
-            id="description"
-            className="form-control"
-            placeholder="Description"
-            aria-describedby="descriptionInput"
-          />
-          <small
-            id="descriptionInput"
-            className="form-text text-muted mb-4"
-          >
-            Technologies, Plans, Etc.
-          </small>
           <div className="form-row mb-4">
             <div className="col">
               {/* id: friendOne */}
