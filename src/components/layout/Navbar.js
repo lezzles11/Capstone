@@ -171,10 +171,7 @@ export default function Navbar() {
         CURRENT TASK:{" "}
         <h5>Finish connecting redux to components</h5>
         <ol>
-          <li>
-            Connect past project and ongoing projects to
-            redux
-          </li>
+          <li>Implement delete functionality</li>
         </ol>
       </h1>
       <h6>
@@ -182,7 +179,9 @@ export default function Navbar() {
         page, add project page, calendar page, project page,
         ongoing projects, past projects, payment page, redux
         connect features to timeline, redux connect features
-        project page, redux connect to calendar :){" "}
+        project page, redux connect to calendar, redux
+        connect to past projects, redux connect to ongoing
+        projects, :){" "}
       </h6>
       <SwitchFunction />
     </div>

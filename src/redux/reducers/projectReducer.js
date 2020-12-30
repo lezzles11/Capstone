@@ -10,6 +10,8 @@ const initialState = [
     user_id: 1,
     done: false,
     name: "Project Management",
+    image_url:
+      "https://mdbootstrap.com/img/Photos/Others/images/50.jpg",
     deadline: "Jan 12, 2021",
     color: "green",
     purpose: "The purpose of this project is to ",
@@ -20,6 +22,8 @@ const initialState = [
     id: 2,
     user_id: 1,
     done: false,
+    image_url:
+      "https://mdbootstrap.com/img/Photos/Others/images/49.jpg",
     name: "UDemy Data Structures",
     deadline: "Feb 12, 2021",
     purpose:
@@ -32,6 +36,8 @@ const initialState = [
     id: 3,
     user_id: 1,
     done: false,
+    image_url:
+      "https://mdbootstrap.com/img/Photos/Others/images/48.jpg",
     name: "Finish Videos",
     deadline: "March 12, 2021",
     purpose:
@@ -43,10 +49,41 @@ const initialState = [
   {
     id: 4,
     user_id: 1,
-    done: false,
+    done: true,
+    image_url:
+      "https://mdbootstrap.com/img/Photos/Others/images/47.jpg",
     name: "Hygge App",
     deadline: "",
-    purpose: "",
+    purpose:
+      "We wanted to create a platform in which people could have more authentic conversations.",
+    color: "blue",
+    friendOneEmail: "anubhav@xccelerate.co",
+    friendTwoEmail: "samo@xccelerate.co",
+  },
+  {
+    id: 5,
+    user_id: 1,
+    done: true,
+    image_url:
+      "https://mdbootstrap.com/img/Photos/Others/images/33.jpg",
+    name: "Twitter",
+    deadline: "",
+    purpose:
+      "We wanted to create a platform in which people could tweet their thoughts in 250 words or less because people talk too much.",
+    color: "blue",
+    friendOneEmail: "anubhav@xccelerate.co",
+    friendTwoEmail: "samo@xccelerate.co",
+  },
+  {
+    id: 6,
+    user_id: 1,
+    done: true,
+    image_url:
+      "https://mdbootstrap.com/img/Photos/Others/images/34.jpg",
+    name: "Facebook",
+    deadline: "",
+    purpose:
+      "This project saved the world. You might have heard of it.",
     color: "blue",
     friendOneEmail: "anubhav@xccelerate.co",
     friendTwoEmail: "samo@xccelerate.co",

@@ -94,21 +94,21 @@ class OngoingProjectsPage extends Component {
   loadProjects = (projects) => {
     let projectList = [];
     for (let i = 0; i < projects.length; i++) {
-      //   if (projects[i].done === true) {
-      projectList.push(
-        <div className="col-6">
-          <ProjectCard
-            name={projects[i].name}
-            purpose={projects[i].purpose}
-            friendOneEmail={projects[i].friendOneEmail}
-            friendTwoEmail={projects[i].friendTwoEmail}
-            deadline={projects[i].deadline}
-            color={projects[i].color}
-          />
-          <br />
-        </div>
-      );
-      //   }
+      if (projects[i].done !== true) {
+        projectList.push(
+          <div className="col-6">
+            <ProjectCard
+              name={projects[i].name}
+              purpose={projects[i].purpose}
+              friendOneEmail={projects[i].friendOneEmail}
+              friendTwoEmail={projects[i].friendTwoEmail}
+              deadline={projects[i].deadline}
+              color={projects[i].color}
+            />
+            <br />
+          </div>
+        );
+      }
     }
     return projectList;
   };
