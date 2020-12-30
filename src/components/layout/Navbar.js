@@ -196,7 +196,7 @@ export default function Navbar() {
         connect features to timeline, redux connect features
         project page, redux connect to calendar, redux
         connect to past projects, redux connect to ongoing
-        projects, Implement delete for feature :){" "}
+        projects, Implement delete for feature, able to add project :){" "}
       </h6>
       <SwitchFunction />
     </div>
