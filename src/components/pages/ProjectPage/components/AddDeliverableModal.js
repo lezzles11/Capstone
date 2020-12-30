@@ -57,7 +57,8 @@ Fade.propTypes = {
   onExited: PropTypes.func,
 };
 
-function AddProjectForm() {
+function AddProjectForm () {
+    
   return (
     <div className="row d-flex justify-content-center">
       <div className="col-md-12">

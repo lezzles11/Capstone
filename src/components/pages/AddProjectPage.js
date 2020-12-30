@@ -29,7 +29,11 @@ class AddProjectForm extends Component {
     return (
       <div className="row d-flex justify-content-center">
         <div className="col-md-6">
-          <form className="text-center" action="#!">
+          <form
+            className="text-center"
+            onSubmit={this.addProject}
+            action="#!"
+          >
             <p className="h4 mb-4">Add New Project</p>
             {/* id: projectName */}
             <div className="row">
@@ -37,7 +41,10 @@ class AddProjectForm extends Component {
                 <input
                   type="text"
                   id="projectName"
+                  onChange={this.handleChange}
                   className="form-control"
+                  name="name"
+                  value={this.state.name}
                   placeholder="Project Name"
                   aria-describedby="projectName"
                 />
@@ -51,7 +58,10 @@ class AddProjectForm extends Component {
               <div className="col">
                 <input
                   type="text"
+                  onChange={this.handleChange}
+                  value={this.state.deadline}
                   id="projectDeadline"
+                  name="deadline"
                   className="form-control"
                   placeholder="Project Deadline"
                   aria-describedby="projectDeadlineSmall"
@@ -68,7 +78,10 @@ class AddProjectForm extends Component {
             {/* id: purpose */}
             <input
               type="text"
+              onChange={this.handleChange}
               id="purpose"
+              value={this.state.purpose}
+              name="purpose"
               className="form-control"
               placeholder="Purpose"
               aria-describedby="purposeInput"
@@ -84,7 +97,10 @@ class AddProjectForm extends Component {
                 {/* id: friendOne */}
                 <input
                   type="text"
+                  onChange={this.handleChange}
                   id="friendOne"
+                  value={this.state.friendOneEmail}
+                  name="friendOneEmail"
                   className="form-control"
                   placeholder="Email of Friend One"
                   aria-describedby="friendOneSmallText"
@@ -100,7 +116,10 @@ class AddProjectForm extends Component {
                 {/* id: friendTwo */}
                 <input
                   type="text"
-                  id="friendTwo"
+                  onChange={this.handleChange}
+                  id="friendTwoEmail"
+                  value={this.state.friendTwoEmail}
+                  name="friendTwoEmail"
                   className="form-control"
                   placeholder="Email of Friend Two"
                   aria-describedby="friendTwoSmallText"
@@ -145,7 +164,7 @@ function TaskBreakdown() {
   );
 }
 
-export default function AddProjectPage() {
+function AddProjectPage() {
   return (
     <section className="text-center text-lg-left dark-grey-text">
       <div>
@@ -154,3 +173,7 @@ export default function AddProjectPage() {
     </section>
   );
 }
+
+export default connect(null, { addProject })(
+  AddProjectForm
+);

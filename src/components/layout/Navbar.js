@@ -171,7 +171,22 @@ export default function Navbar() {
         CURRENT TASK:{" "}
         <h5>Finish connecting redux to components</h5>
         <ol>
-          <li>Implement delete functionality</li>
+          <li>
+            Redux: Changing states - Able to add task to
+            feature
+          </li>
+          <li>
+            Redux: Changing states - able to mark task as
+            done{" "}
+          </li>
+          <li>
+            Redux: Changing states - able to mark feature as
+            done on calendar page
+          </li>
+          <li>
+            Redux: Changing states - able to mark feature as
+            done on calendar page
+          </li>
         </ol>
       </h1>
       <h6>
@@ -181,7 +196,7 @@ export default function Navbar() {
         connect features to timeline, redux connect features
         project page, redux connect to calendar, redux
         connect to past projects, redux connect to ongoing
-        projects, :){" "}
+        projects, Implement delete for feature :){" "}
       </h6>
       <SwitchFunction />
     </div>
