@@ -162,33 +162,115 @@ function SwitchFunction() {
     </div>
   );
 }
+function Row({
+  data,
+  add,
+  done,
+  edit,
+  deleteF,
+  get,
+  page,
+  obstacles,
+  plan,
+}) {
+  return (
+    <tr>
+      <th scope="row">{data}</th>
+      <td>{add}</td>
+      <td>{done}</td>
+      <td>{edit}</td>
+      <td>{deleteF}</td>
+      <td>{get}</td>
+      <td>{page}</td>
+      <td>{obstacles}</td>
+      <td>{plan}</td>
+    </tr>
+  );
+}
 export default function Navbar() {
   return (
     <div>
       <Nav />
       <h5>Deadline: Jan 12, 2021</h5>
-      <h1>
-        CURRENT TASK:{" "}
-        <h5>Finish connecting redux to components</h5>
-        <ol>
-          <li>
-            Redux: Changing states - Able to add task to
-            feature
-          </li>
-          <li>
-            Redux: Changing states - able to mark task as
-            done{" "}
-          </li>
-          <li>
-            Redux: Changing states - able to mark feature as
-            done on calendar page
-          </li>
-          <li>
-            Redux: Changing states - able to mark feature as
-            done on calendar page
-          </li>
-        </ol>
-      </h1>
+      CURRENT TASK:{" "}
+      <h5>Finish connecting redux to components</h5>
+      <p>
+        redux
+        <table className="table table-bordered table-striped mb-0">
+          <thead>
+            <tr>
+              <th>data</th>
+              <th>add data</th>
+              <th>mark done</th>
+              <th>edit</th>
+              <th>delete</th>
+              <th>get</th>
+              <th>page</th>
+              <th>obstacles</th>
+              <th>current task</th>
+            </tr>
+          </thead>
+          <tbody>
+            <Row
+              data="User"
+              add="signup"
+              done=""
+              edit=""
+              deleteF="done"
+              get="done"
+              page="login, signup"
+              obstacles="authentication, database"
+              plan="finish edit"
+            />{" "}
+            <Row
+              data="Project"
+              add="add project page"
+              done=""
+              edit=""
+              deleteF=""
+              get="done"
+              page="add project page, feature page, ongoing, past
+              projects"
+              obstacles="mark as done (and then shift it onto past projects page)"
+              plan="mark as done should be on the project page - "
+            />
+            <Row
+              data="Feature"
+              add="done"
+              done=""
+              edit=""
+              deleteF="done"
+              get="done"
+              page="project page, calendar, feature"
+              obstacles="calendar formatting - start and end"
+              plan="Look at how the dates are currently formatted and identify the function needed, When adding color: adding random color to the
+            project page, mark as done should be on the feature page - once its done, an email should be sent to friend "
+            />
+            <Row
+              data="Task"
+              add=""
+              done=""
+              edit=""
+              deleteF=""
+              get=""
+              page=""
+              obstacles=""
+              plan=""
+            />
+            <Row
+              data="Task"
+              add=""
+              done=""
+              edit=""
+              deleteF=""
+              get=""
+              page=""
+              obstacles=""
+              plan=""
+            />
+          </tbody>
+        </table>
+      </p>
       <h6>
         Finished tasks: home page, sign in page, sign up
         page, add project page, calendar page, project page,
@@ -196,7 +278,9 @@ export default function Navbar() {
         connect features to timeline, redux connect features
         project page, redux connect to calendar, redux
         connect to past projects, redux connect to ongoing
-        projects, Implement delete for feature, able to add project :){" "}
+        projects, Implement delete for feature, able to add
+        project, able to connect add feature form to redux,
+        :){" "}
       </h6>
       <SwitchFunction />
     </div>

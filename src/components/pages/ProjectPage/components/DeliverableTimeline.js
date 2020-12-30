@@ -46,7 +46,7 @@ class DeliverableTimeline extends Component {
         <div className="container">
           <br />
           <h5>Timeline</h5>
-          <Steps current={0} progressDot={customDot}>
+          <Steps current={1} progressDot={customDot}>
             {this.loadFeatures(features)}
           </Steps>
           <br />

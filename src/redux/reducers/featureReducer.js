@@ -317,7 +317,8 @@ const featureReducer = (state = initialState, action) => {
     // #TODO: MARK AS DONE -> send out email
     // #TODO: ADD TASK
     // #TODO: MARK TASK AS DONE
-    // #TODO: MARK
+    // #TODO: DELETE TASK
+    // #TODO: SEND EMAIL TO FRIEND
     default:
       return state;
   }
