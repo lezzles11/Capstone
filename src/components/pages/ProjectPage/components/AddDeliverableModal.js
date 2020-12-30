@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import { useSpring, animated } from "react-spring/web.cjs";
+import { connect } from "react-redux";
+import { addFeature } from "../../../../redux/actions/featureActions";
+import AddFeatureForm from "./AddFeatureForm";
 import PropTypes from "prop-types";
 // web.cjs is required for IE 11 support
 
@@ -56,76 +59,7 @@ Fade.propTypes = {
   onEnter: PropTypes.func,
   onExited: PropTypes.func,
 };
-
-function AddProjectForm () {
-    
-  return (
-    <div className="row d-flex justify-content-center">
-      <div className="col-md-12">
-        <form className="text-center" action="#!">
-          <p className="h4 mb-4">Add Deliverable</p>
-          {/* id: projectName */}
-          {/* id: purpose */}
-          <input
-            type="text"
-            id="deliverableItem"
-            className="form-control"
-            placeholder="Deliverable Item"
-            aria-describedby="deliverableInput"
-          />
-          <small
-            id="deliverableInput"
-            className="form-text text-muted mb-4"
-          >
-            Specific Deliverable
-          </small>
-          {/* id: description */}
-          <input
-            type="textarea"
-            id="description"
-            className="form-control"
-            placeholder="Description"
-            aria-describedby="descriptionInput"
-          />
-          <small
-            id="descriptionInput"
-            className="form-text text-muted mb-4"
-          >
-            Technologies, Header, Etc.
-          </small>
-          <div className="form-row mb-4">
-            <div className="col">
-              {/* id: friendTwo */}
-              <input
-                type="text"
-                id="deliverableDeadline"
-                className="form-control"
-                placeholder="Deadline"
-                aria-describedby="deadlineInput"
-              />
-              <small
-                id="deadlineInput"
-                className="form-text text-muted mb-4"
-              >
-                When is this due?
-              </small>
-            </div>
-          </div>
-
-          {/* ENDING FORM */}
-
-          <button
-            className="btn btn-info my-4 btn-block"
-            type="submit"
-          >
-            Let's Execute
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-}
-export default function AddDeliverableModal({ name }) {
+function AddDeliverableModal(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -144,7 +78,7 @@ export default function AddDeliverableModal({ name }) {
         className="btn btn-outline-dark waves-effect"
         onClick={handleOpen}
       >
-        {name}
+        Add Feature
       </button>
       <Modal
         aria-labelledby="spring-modal-title"
@@ -160,10 +94,14 @@ export default function AddDeliverableModal({ name }) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <AddProjectForm />
+            <AddFeatureForm />
           </div>
         </Fade>
       </Modal>
     </div>
   );
 }
+
+export default connect(null, { addFeature })(
+  AddDeliverableModal
+);
