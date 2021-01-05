@@ -314,6 +314,7 @@ const featureReducer = (state = initialState, action) => {
       return state.filter(
         (feature) => feature.id !== action.payload
       );
+      
     // #TODO: MARK AS DONE -> send out email
     // #TODO: ADD TASK
     // #TODO: MARK TASK AS DONE
@@ -323,10 +324,10 @@ const featureReducer = (state = initialState, action) => {
       return state;
   }
 };
-let generateID = (orders) => {
+let generateID = (features) => {
   let lastId = 0;
-  if (orders.length > 0) {
-    lastId = orders[orders.length - 1].id;
+  if (features.length > 0) {
+    lastId = features[features.length - 1].id;
   }
   return ++lastId;
 };
