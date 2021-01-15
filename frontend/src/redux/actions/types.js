@@ -13,6 +13,10 @@
 export const ADD_USER = "ADD_USER";
 export const EDIT_USER = "EDIT_USER";
 export const DELETE_USER = "DELETE_USER";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAILURE = "LOGIN_FAILURE";
+export const USER_DETAIL = "USER_DETAIL";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
 
 // #TODO: this action will send an email to friends every time you have a complete feature
 export const FINISHED_FEATURE = "FINISHED_FEATURE";
