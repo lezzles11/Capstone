@@ -69,8 +69,6 @@ let postFeatureObject = {
   end: new Date(2022, 1, 1),
 };
 
-function getAllDates(projectId, database = connection) {}
-
 // Get All Project Features
 function getAllProjectFeatures(
   projectId,
@@ -124,3 +122,13 @@ function deleteFeature(featureId, database = connection) {
       console.log("deleted feature");
     });
 }
+
+module.exports = {
+  getAllFeatures,
+  addFeature,
+  getAllProjectFeatures,
+  getAllUserFeatures,
+  getFeature,
+  editFeature,
+  deleteFeature,
+};

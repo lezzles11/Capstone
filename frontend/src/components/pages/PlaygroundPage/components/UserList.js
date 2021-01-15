@@ -13,6 +13,7 @@ class UserList extends Component {
   };
   loadUsers = (users) => {
     let userList = [];
+
     for (let i = 0; i < users.length; i++) {
       console.log(users[i]);
       userList.push(
@@ -39,12 +40,21 @@ class UserList extends Component {
   };
   render() {
     let users = this.props.users;
-    return <div>{this.loadUsers(users)}</div>;
+    let isAuthenticated = this.props.isAuthenticated;
+
+    return (
+      <div>
+        {this.loadUsers(users)}
+        hello
+        <h3>I am authenticated: {isAuthenticated}</h3>
+      </div>
+    );
   }
 }
 
 const mapStateToProps = (state) => ({
-  users: state.users,
+  users: state.users.users,
+  isAuthenticated: state.users.isAuthenticated,
 });
 export default connect(mapStateToProps, { deleteUser })(
   UserList

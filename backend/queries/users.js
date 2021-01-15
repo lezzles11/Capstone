@@ -43,11 +43,7 @@ function postUserByStrings(
       console.log("inserted new user");
     });
 }
-/**********************************************
- * Why isn't this working?
- * ==================================
- *
- ***********************************************/
+
 function postUserByObject(user, database = connection) {
   return database("users")
     .insert(user)
@@ -135,3 +131,13 @@ function getUserByObject(user, database = connection) {
 function getUserById(id, database = connection) {
   return database("users").where({ id: id });
 }
+
+module.exports = {
+  postUserByStrings,
+  postUserByObject,
+  editUserByObject,
+  deleteUserById,
+  getAllUsers,
+  getUserByObject,
+  getUserById,
+};
