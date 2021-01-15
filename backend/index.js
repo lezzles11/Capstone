@@ -15,6 +15,7 @@ const bodyParser = require("body-parser");
 const axios = require("axios");
 const config = require("./config.js");
 const app = express();
+const userRoutes = require("./routes/users");
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -26,6 +27,8 @@ const knex = require("knex")(knexFile);
 const authClass = require("./auth")(knex);
 
 app.use(authClass.initialize());
+
+app.use("/api/users", userRoutes);
 
 app.post("/api/login", async function (req, res) {
   console.log("logging in");

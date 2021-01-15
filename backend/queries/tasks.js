@@ -125,3 +125,12 @@ function getTaskByObject(
   taskObject,
   database = connection
 ) {}
+
+module.exports = {
+  getTasksByFeatureId,
+  getTasksByFeatureObject,
+  getTaskById,
+  addTask,
+  editTask,
+  deleteTask,
+};

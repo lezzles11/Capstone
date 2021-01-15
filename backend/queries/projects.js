@@ -158,3 +158,14 @@ let postProjectObject = {
   friendOneEmail: "emailOne@xccelerate.co",
   friendTwoEmail: "emailTwo@xccelerate.co",
 };
+
+module.exports = {
+  getAllProjects,
+  getProjectById,
+  getPastProjects,
+  getCurrentProjects,
+  editProject,
+  addProject,
+  getAllUserProjects,
+  deleteProjectById,
+};

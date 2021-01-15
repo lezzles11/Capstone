@@ -6,6 +6,7 @@ import {
   USER_DETAIL,
   LOGOUT_SUCCESS,
 } from "./types";
+import axios from "axios";
 
 export const addUser = (user) => ({
   type: ADD_USER,
