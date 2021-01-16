@@ -1,6 +1,6 @@
 const express = require("express");
 
-const db = require("../queries/users");
+const userQueries = require("../queries/users");
 
 const router = express.Router();
 
@@ -16,7 +16,8 @@ router.get("/:id", (request, response) => {
   console.log("Getting user by id, not finished route");
   let id = parseInt(request.params.id);
   console.log(id);
-  db.getUserById(id)
+  userQueries
+    .getUserById(id)
     .then((user) => {
       response.json(user);
     })
@@ -26,7 +27,8 @@ router.get("/:id", (request, response) => {
 });
 
 router.get("/", (request, response) => {
-  db.getAllUsers()
+  userQueries
+    .getAllUsers()
     .then((users) => {
       console.log("Getting all users: ", users);
       response.json(users);
