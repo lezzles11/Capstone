@@ -131,6 +131,21 @@ function getUserByObject(user, database = connection) {
 function getUserById(id, database = connection) {
   return database("users").where({ id: id });
 }
+function getUserByEmailAndPassword(
+  email,
+  password,
+  database = connection
+) {
+  return database("users")
+    .where({ email: email, password: password })
+    .first();
+}
+readQuery(
+  getUserByEmailAndPassword(
+    "ryan@xccelerate.co",
+    "password"
+  )
+);
 
 module.exports = {
   postUserByStrings,
@@ -140,4 +155,5 @@ module.exports = {
   getAllUsers,
   getUserByObject,
   getUserById,
+  getUserByEmailAndPassword,
 };

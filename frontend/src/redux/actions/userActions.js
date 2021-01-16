@@ -55,6 +55,7 @@ export function getUserInfoThunk() {
         },
       })
       .then((response) => {
+        console.log(response);
         if (response.data == null) {
           console.log("failure");
         } else {
@@ -80,15 +81,23 @@ export function getUserInfoThunk() {
  ***********************************************/
 export function loginUserThunk(email, password) {
   return (dispatch) => {
+    console.log(
+      "Thunk received email and password! ",
+      "Email: ",
+      email,
+      "Password: ",
+      password
+    );
+    console.log(
+      "Alright, going to post this request now, so then it should go to the dear database to post it accordingly"
+    );
     return axios
-      .post(
-        `${process.env.REACT_APP_API_SERVER}/api/login`,
-        {
-          email: email,
-          password: password,
-        }
-      )
+      .post(`http://localhost:8080/api/login`, {
+        email: email,
+        password: password,
+      })
       .then((response) => {
+        console.log("Trying to login: ", response);
         if (response.data == null) {
           dispatch(
             loginFailure("Didn't get any data back")

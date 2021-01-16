@@ -31,11 +31,18 @@ class LoginPage extends Component {
       password: "",
     };
   }
-  login = () => {
+  login = (event) => {
+    console.log(
+      "Login click handler here! Expecting to go to thunk next. ",
+      this.state.email,
+      this.state.password
+    );
     this.props.loginRedux(
       this.state.email,
       this.state.password
     );
+
+    event.preventDefault();
   };
 
   handleChange = (event) => {
@@ -66,39 +73,37 @@ class LoginPage extends Component {
               even feel like work; it’s closer to play.
             </div>
 
-            <form>
-              <div className="md-form md-outline form-lg">
-                <input
-                  name="email"
-                  onChange={this.handleChange}
-                  value={this.state.email}
-                  type="text"
-                  id="form1"
-                  className="form-control form-control-lg"
-                />
-                <label for="form1">Email</label>
-              </div>
+            <div className="md-form md-outline form-lg">
+              <input
+                name="email"
+                onChange={this.handleChange}
+                value={this.state.email}
+                placeholder="Email"
+                type="text"
+                id="form1"
+                className="form-control form-control-lg"
+              />
+            </div>
 
-              <div className="md-form md-outline form-lg">
-                <input
-                  name="password"
-                  onChange={this.handleChange}
-                  value={this.state.password}
-                  type="password"
-                  id="form2"
-                  className="form-control form-control-lg"
-                />
-                <label for="form2">Password</label>
-              </div>
+            <div className="md-form md-outline form-lg">
+              <input
+                name="password"
+                onChange={this.handleChange}
+                value={this.state.password}
+                placeholder="Password"
+                type="password"
+                id="form2"
+                className="form-control form-control-lg"
+              />
+            </div>
 
-              <button
-                onClick={this.login}
-                type="submit"
-                className="btn btn-cyan waves-effect "
-              >
-                game time
-              </button>
-            </form>
+            <button
+              type="submit"
+              onClick={this.login}
+              className="btn btn-cyan waves-effect "
+            >
+              game time
+            </button>
           </div>
           <div className="col-lg-5 mb-4">
             <div className="view overlay">

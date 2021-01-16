@@ -16,31 +16,34 @@ const axios = require("axios");
 const config = require("./config.js");
 const app = express();
 const userRoutes = require("./routes/users");
-
+const connection = require("./connection");
+const readQuery = require("./queries/utilities");
+const userQueries = require("./queries/users");
 app.use(bodyParser.json());
 app.use(cors());
-
-const knexFile = require("./knexfile.js")["development"];
-
-const knex = require("knex")(knexFile);
-
-const authClass = require("./auth")(knex);
+/**********************************************
+ * Getting the query
+ * ==================================
+ * 1. Import the function
+ * 2.
+ ***********************************************/
+const authClass = require("./auth")(connection);
 
 app.use(authClass.initialize());
 
 app.use("/api/users", userRoutes);
 
 app.post("/api/login", async function (req, res) {
-  console.log("logging in");
+  console.log("Backend received email and password: ");
   console.log(req.body.email, req.body.password);
   if (req.body.email && req.body.password) {
     let email = req.body.email;
     let password = req.body.password;
-    let query = await knex
+
+    let query = await connection
       .select("*")
       .from("users")
-      .where("email", email)
-      .andWhere("password", password);
+      .where("email", email);
 
     await query;
 
@@ -48,7 +51,16 @@ app.post("/api/login", async function (req, res) {
       let userId = {
         id: query[0].id,
       };
+      console.log("Successful query: ", query[0].email);
       let token = jwt.sign(userId, config.jwtSecret);
+      console.log("\n**********");
+      console.log("What should happen: ");
+      console.log(`Received token: ${token}`);
+      console.log("\nReceived this data from: ");
+      console.log(``);
+      console.log("\nThis should go: ");
+      console.log("What is happening: ");
+      console.log("**********\n");
       res.json({
         token: token,
       });
@@ -71,7 +83,6 @@ app.get(
     let token = request.headers.authorization.split(" ")[1];
     console.log("Token: ", token);
     let decoded = jwt.verify(token, config.jwtSecret);
-    console.log("Decoded token: ", decoded);
     response.send("hello");
   }
 );
