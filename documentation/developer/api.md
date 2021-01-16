@@ -7,7 +7,7 @@
 
 `*` indicates an endpoint protected with an `Authorization` header
 
-## `POST /api/signup`
+## `POST /api/users/signup`
 
 Request:
 
@@ -28,7 +28,7 @@ Response:
 }
 ```
 
-## `POST /api/login`
+## `POST /api/users/login`
 
 Request:
 
@@ -86,7 +86,7 @@ Request:
 {
   email: string,
   newPassword: string,
-  currentPassword: string
+  password: string
 }
 ```
 
@@ -96,7 +96,7 @@ Request:
 
 ```js
 {
-  email: string;
+  id: integer;
 }
 ```
 
